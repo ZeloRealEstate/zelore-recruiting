@@ -815,6 +815,36 @@ section { padding: 100px 60px; }
   transform: translateY(-1px);
 }
 
+.btn-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Honeypot anti-spam: fuori dallo schermo, invisibile agli utenti */
+.hp-field {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/* Messaggio di stato del form (successo / errore) */
+.form-status {
+  margin-top: 16px;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.form-status.is-success {
+  color: var(--terracotta);
+  font-weight: 600;
+}
+
+.form-status.is-error { color: #e57373; }
+
 /* ─── FOOTER ─── */
 footer {
   background: var(--dark-2);
