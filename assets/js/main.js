@@ -80,7 +80,7 @@
       .then(function (res) {
         if (!res.ok) throw new Error('HTTP ' + res.status);
         form.reset();
-        showStatus('✓ Candidatura ricevuta — ti ricontattiamo entro 48 ore.', 'success');
+        showStatus('✓ Candidatura ricevuta — ti ricontattiamo al più presto.', 'success');
         if (button) button.textContent = 'Candidatura inviata ✓';
       })
       .catch(function () {
@@ -90,5 +90,17 @@
           button.textContent = buttonLabel;
         }
       });
+  });
+})();
+
+// ─── Pre-selezione del ruolo dai CTA di corsia ("Candidati come Agente/Marketing") ───
+(function () {
+  var area = document.getElementById('area');
+  if (!area) return;
+
+  document.querySelectorAll('[data-area]').forEach(function (link) {
+    link.addEventListener('click', function () {
+      area.value = link.getAttribute('data-area');
+    });
   });
 })();
