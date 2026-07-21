@@ -82,6 +82,13 @@
         form.reset();
         showStatus('✓ Candidatura ricevuta — ti ricontattiamo al più presto.', 'success');
         if (button) button.textContent = 'Candidatura inviata ✓';
+
+        // Evento dataLayer per il tag di conversione Google Ads in GTM.
+        // Nome evento dedicato (diverso da "lead_form_submit" usato su LP1/LP3)
+        // per non confondere la conversione recruiting con quella venditori.
+        if (window.dataLayer) {
+          window.dataLayer.push({ event: 'recruiting_form_submit', area: payload.area });
+        }
       })
       .catch(function () {
         showStatus('Qualcosa è andato storto. Riprova o scrivici via email.', 'error');
