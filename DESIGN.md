@@ -182,6 +182,8 @@ A warm, low-saturation earth palette: cream, near-black ink and one terracotta s
 
 ## Layout
 
+All font sizes are in `rem` (16px base) so text follows the user's browser text-size setting; spacing stays in px. Content sits in a single `<main id="main">`, reached by a "Vai al contenuto" skip link that appears on keyboard focus.
+
 The layout uses a full-bleed section model with alternating background bands: page → cream → page → cream → white → page → footer dark. Sections are padded 100px vertically and 60px horizontally; below 900px this drops to 70px and 24px. Content is bounded by `max-width` per block (hero grid 1180px, section heads 720px, founders 800px). There is no global container.
 
 - **Hero:** 1.15fr / 0.85fr grid. Copy sits on the left; the white stats panel sits on the right as a vertical list split by hairlines.
@@ -251,6 +253,9 @@ A single focus ring is used everywhere: `outline: 2px solid accent-ink; outline-
 ### Placeholders to confirm
 Copy the client has not confirmed yet sits in `<mark class="todo">[… DA CONFERMARE]</mark>`: a terracotta tint with bold accent-ink text, so it cannot ship unnoticed.
 
+### Images
+Founder portraits ship as 360px WebP (about 10 KB each, 2× the 176px display) with explicit `width`/`height`, `loading="lazy"` and `decoding="async"`. The original JPGs stay in `assets/images` as sources only.
+
 ### Navigation
 - Fixed white bar at 95% opacity with a 12px backdrop blur and a hairline bottom border. Padding is 20px 60px (16px 24px on mobile).
 - The dark logo SVG sits at 36px high on the left. Centre links are 13px uppercase at 0.1em in ink, turning `accent-ink` on hover. The compact CTA sits on the right.
@@ -266,7 +271,7 @@ A comparison of horizontal 100% stacked bars, 46px high with square ends. The tr
 The proof of the pre-qualification method, set apart from the cards. It sits directly on the cream page, with no card. A giant Playfair 900 "32" in `terracotta-text` sits beside the headline "visite in un solo sabato.", a short paragraph and a grid of 32 terracotta squares, one per viewing (16 per row on desktop, 8 on mobile). It is the page's one authored motion moment: the squares fill in sequence (32ms apart, ease-out) when the band enters view.
 
 ### Motion
-Sections fade up 18px over 0.6s ease as they enter the viewport (`.reveal` → `.in`). The "32" squares are the only staggered animation. With `prefers-reduced-motion`, the reveal, the squares and smooth scroll are all disabled.
+Sections fade up 18px over 0.6s ease as they enter the viewport (`.reveal` → `.in`). The hidden starting state applies only under `html.js`, set by an inline script in `<head>`, so without JavaScript every section and every "32" square is simply visible. The "32" squares are the only staggered animation. With `prefers-reduced-motion`, the reveal, the squares and smooth scroll are all disabled.
 
 ## Do's and Don'ts
 

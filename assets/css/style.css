@@ -90,7 +90,7 @@ nav .nav-links {
 }
 
 nav .nav-links a {
-  font-size: 13px;
+  font-size: 0.8125rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--ink);
@@ -103,7 +103,7 @@ nav .nav-links a:hover { color: var(--accent-ink); }
 .btn-nav {
   background: var(--terracotta);
   color: var(--dark);
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -160,7 +160,7 @@ nav .nav-links a:hover { color: var(--accent-ink); }
 
 .hero-h1 {
   font-family: 'Playfair Display', serif;
-  font-size: clamp(40px, 4.6vw, 68px);
+  font-size: clamp(2.5rem, 4.6vw, 4.25rem);
   font-weight: 900;
   line-height: 1.1;
   max-width: 640px;
@@ -174,7 +174,7 @@ nav .nav-links a:hover { color: var(--accent-ink); }
 }
 
 .hero-sub {
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 300;
   color: var(--ink-soft);
   max-width: 560px;
@@ -197,7 +197,7 @@ nav .nav-links a:hover { color: var(--accent-ink); }
 }
 
 .hero-panel-k {
-  font-size: 11px;
+  font-size: 0.6875rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--accent-ink);
@@ -214,7 +214,7 @@ nav .nav-links a:hover { color: var(--accent-ink); }
 .hero-stat b {
   font-family: 'Playfair Display', serif;
   font-weight: 900;
-  font-size: 42px;
+  font-size: 2.625rem;
   display: block;
   line-height: 1;
   color: var(--terracotta-text);
@@ -222,7 +222,7 @@ nav .nav-links a:hover { color: var(--accent-ink); }
 }
 
 .hero-stat span {
-  font-size: 13px;
+  font-size: 0.8125rem;
   color: var(--ink-soft);
   line-height: 1.5;
 }
@@ -230,7 +230,7 @@ nav .nav-links a:hover { color: var(--accent-ink); }
 .btn-primary {
   background: var(--terracotta);
   color: var(--dark);
-  font-size: 13px;
+  font-size: 0.8125rem;
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -255,7 +255,7 @@ section { padding: 100px 60px; }
 
 .section-h2 {
   font-family: 'Playfair Display', serif;
-  font-size: clamp(32px, 4vw, 54px);
+  font-size: clamp(2rem, 4vw, 3.375rem);
   font-weight: 700;
   line-height: 1.15;
   margin-bottom: 20px;
@@ -267,7 +267,7 @@ section { padding: 100px 60px; }
 }
 
 .section-sub {
-  font-size: 16px;
+  font-size: 1rem;
   color: var(--ink-soft);
   max-width: 560px;
   line-height: 1.75;
@@ -291,7 +291,7 @@ section { padding: 100px 60px; }
 
 .timechart > h3 {
   font-family: 'Playfair Display', serif;
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 700;
   color: var(--dark);
   margin-bottom: 6px;
@@ -299,7 +299,7 @@ section { padding: 100px 60px; }
 
 .timechart-sub {
   color: var(--ink-soft);
-  font-size: 14px;
+  font-size: 0.875rem;
   margin-bottom: 34px;
 }
 
@@ -314,8 +314,8 @@ section { padding: 100px 60px; }
   margin-bottom: 10px;
 }
 
-.tc-label b { font-size: 15px; font-weight: 600; color: var(--dark); }
-.tc-label span { font-size: 13px; color: var(--ink-mute); }
+.tc-label b { font-size: 0.9375rem; font-weight: 600; color: var(--dark); }
+.tc-label span { font-size: 0.8125rem; color: var(--ink-mute); }
 
 .tc-bar {
   display: flex;
@@ -328,9 +328,8 @@ section { padding: 100px 60px; }
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 600;
-  color: #fff;
   white-space: nowrap;
   min-width: 0;
 }
@@ -354,7 +353,7 @@ section { padding: 100px 60px; }
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-size: 13px;
+  font-size: 0.8125rem;
   color: var(--ink-soft);
 }
 
@@ -362,7 +361,7 @@ section { padding: 100px 60px; }
 .dot-sale-hi { background: var(--terracotta); }
 .dot-sale { background: var(--chart-1); }
 .dot-admin { background: var(--chart-2); }
-.dot-waste { background: var(--chart-3); border: 1px solid #d0d0d0; }
+.dot-waste { background: var(--chart-3); border: 1px solid var(--line-2); }
 .dot-coord { background: var(--chart-coord); border: 1px solid rgba(208,159,121,0.5); }
 
 /* ─── CORSIA AGENTE ─── */
@@ -394,7 +393,7 @@ section { padding: 100px 60px; }
 .ledger-head {
   display: grid;
   grid-template-columns: 1fr 48px 1fr;
-  font-size: 12px;
+  font-size: 0.75rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--ink-soft);
@@ -423,9 +422,9 @@ section { padding: 100px 60px; }
   margin-bottom: 8px;
 }
 
-.ledger-cell p { font-size: 14px; line-height: 1.7; color: var(--ink-soft); max-width: 44ch; }
+.ledger-cell p { font-size: 0.875rem; line-height: 1.7; color: var(--ink-soft); max-width: 44ch; }
 
-.ledger-today h3 { font-size: 19px; color: var(--ink-soft); }
+.ledger-today h3 { font-size: 1.1875rem; color: var(--ink-soft); }
 
 .ledger-zelo {
   background: var(--surface);
@@ -433,14 +432,14 @@ section { padding: 100px 60px; }
   box-shadow: 0 4px 30px rgba(20,20,20,0.05);
 }
 
-.ledger-zelo h3 { font-size: 22px; color: var(--ink); }
+.ledger-zelo h3 { font-size: 1.375rem; color: var(--ink); }
 
 .ledger-arrow { width: 24px; height: 24px; color: var(--terracotta-text); justify-self: center; }
 
 /* Le etichette "Oggi / Da Zelo" servono solo quando le colonne si impilano */
 .ledger-tag {
   display: none;
-  font-size: 11px;
+  font-size: 0.6875rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   margin-bottom: 8px;
@@ -462,7 +461,7 @@ section { padding: 100px 60px; }
 .saturday-num {
   font-family: 'Playfair Display', serif;
   font-weight: 900;
-  font-size: clamp(120px, 15vw, 210px);
+  font-size: clamp(7.5rem, 15vw, 13.125rem);
   line-height: 0.8;
   letter-spacing: -0.04em;
   color: var(--terracotta-text);
@@ -470,14 +469,14 @@ section { padding: 100px 60px; }
 
 .saturday-h {
   font-family: 'Playfair Display', serif;
-  font-size: clamp(28px, 3vw, 40px);
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
   font-weight: 700;
   line-height: 1.15;
   margin-bottom: 14px;
 }
 
 .saturday-body p {
-  font-size: 16px;
+  font-size: 1rem;
   color: var(--ink-soft);
   line-height: 1.7;
   max-width: 46ch;
@@ -496,13 +495,16 @@ section { padding: 100px 60px; }
 .saturday-grid li {
   aspect-ratio: 1;
   background: var(--terracotta);
+}
+
+.js .saturday-grid li {
   opacity: 0;
   transform: scale(0.3);
   transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1), transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
   transition-delay: calc(0.3s + var(--i) * 32ms);
 }
 
-.saturday.in .saturday-grid li { opacity: 1; transform: none; }
+.js .saturday.in .saturday-grid li { opacity: 1; transform: none; }
 
 /* ─── PERCORSO ─── */
 #percorso {
@@ -538,7 +540,7 @@ section { padding: 100px 60px; }
 
 .step-num {
   font-family: 'Playfair Display', serif;
-  font-size: 64px;
+  font-size: 4rem;
   font-weight: 900;
   color: rgba(184,132,92,0.5);
   line-height: 1;
@@ -547,14 +549,14 @@ section { padding: 100px 60px; }
 
 .step-card h3 {
   font-family: 'Playfair Display', serif;
-  font-size: 22px;
+  font-size: 1.375rem;
   font-weight: 700;
   color: var(--dark);
   margin-bottom: 14px;
 }
 
 .step-card p {
-  font-size: 14px;
+  font-size: 0.875rem;
   color: var(--ink-soft);
   line-height: 1.75;
 }
@@ -595,7 +597,7 @@ section { padding: 100px 60px; }
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 32px;
+  font-size: 2rem;
   margin-bottom: 20px;
   overflow: hidden;
 }
@@ -608,13 +610,13 @@ section { padding: 100px 60px; }
 
 .founder-name {
   font-family: 'Playfair Display', serif;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 700;
   margin-bottom: 4px;
 }
 
 .founder-role {
-  font-size: 11px;
+  font-size: 0.6875rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--accent-ink);
@@ -622,7 +624,7 @@ section { padding: 100px 60px; }
 }
 
 .founder-bio {
-  font-size: 14px;
+  font-size: 0.875rem;
   color: var(--ink-soft);
   line-height: 1.75;
 }
@@ -630,7 +632,7 @@ section { padding: 100px 60px; }
 .founders-quote {
   margin-top: 60px;
   font-family: 'Playfair Display', serif;
-  font-size: 18px;
+  font-size: 1.125rem;
   font-style: italic;
   color: var(--ink-soft);
   max-width: 560px;
@@ -654,7 +656,7 @@ section { padding: 100px 60px; }
 
 .candidatura-left h2 {
   font-family: 'Playfair Display', serif;
-  font-size: clamp(32px, 4vw, 52px);
+  font-size: clamp(2rem, 4vw, 3.25rem);
   font-weight: 900;
   line-height: 1.1;
   margin-bottom: 20px;
@@ -666,7 +668,7 @@ section { padding: 100px 60px; }
 }
 
 .candidatura-left p {
-  font-size: 15px;
+  font-size: 0.9375rem;
   color: var(--ink-soft);
   line-height: 1.75;
   margin-bottom: 20px;
@@ -685,7 +687,7 @@ section { padding: 100px 60px; }
   display: flex;
   align-items: center;
   gap: 14px;
-  font-size: 14px;
+  font-size: 0.875rem;
   color: var(--ink-soft);
 }
 
@@ -706,20 +708,20 @@ section { padding: 100px 60px; }
 
 .form-title {
   font-family: 'Playfair Display', serif;
-  font-size: 22px;
+  font-size: 1.375rem;
   font-weight: 700;
   margin-bottom: 8px;
 }
 
 .form-sub {
-  font-size: 14px;
+  font-size: 0.875rem;
   color: var(--ink-soft);
   margin-bottom: 16px;
 }
 
 /* La rassicurazione sta prima dei campi, non sotto il bottone */
 .form-assurance {
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.55;
   color: var(--ink);
   background: var(--surface-2);
@@ -731,7 +733,7 @@ section { padding: 100px 60px; }
 .form-assurance strong { color: var(--accent-ink); }
 
 .form-noscript {
-  font-size: 14px;
+  font-size: 0.875rem;
   color: var(--error);
   margin-bottom: 20px;
 }
@@ -748,7 +750,7 @@ section { padding: 100px 60px; }
 
 .form-group label {
   display: block;
-  font-size: 12px;
+  font-size: 0.75rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--ink-soft);
@@ -763,7 +765,7 @@ section { padding: 100px 60px; }
   border: 1px solid var(--line-2);
   color: var(--ink);
   font-family: 'Inter', sans-serif;
-  font-size: 14px;
+  font-size: 0.875rem;
   padding: 13px 16px;
   transition: border-color 0.2s;
   appearance: none;
@@ -791,7 +793,7 @@ section { padding: 100px 60px; }
 /* Messaggio d'errore sotto il campo */
 .field-error {
   margin-top: 6px;
-  font-size: 13px;
+  font-size: 0.8125rem;
   line-height: 1.4;
   color: var(--error);
 }
@@ -812,7 +814,7 @@ section { padding: 100px 60px; }
 
 .field-hint {
   margin-top: 6px;
-  font-size: 13px;
+  font-size: 0.8125rem;
   line-height: 1.45;
   color: var(--ink-soft);
 }
@@ -833,7 +835,7 @@ section { padding: 100px 60px; }
 }
 
 .form-checkbox label {
-  font-size: 13px;
+  font-size: 0.8125rem;
   color: var(--ink-soft);
   line-height: 1.5;
 }
@@ -845,7 +847,7 @@ section { padding: 100px 60px; }
   background: var(--terracotta);
   color: var(--dark);
   font-family: 'Inter', sans-serif;
-  font-size: 13px;
+  font-size: 0.8125rem;
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -865,6 +867,24 @@ section { padding: 100px 60px; }
   cursor: not-allowed;
   transform: none;
 }
+
+/* Link "Vai al contenuto": visibile solo quando riceve il focus da tastiera */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 16px;
+  z-index: 200;
+  background: var(--ink);
+  color: var(--white);
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 12px 18px;
+  text-decoration: none;
+}
+
+.skip-link:focus { top: 12px; }
+
+main:focus { outline: none; }
 
 /* Testo solo per screen reader */
 .sr-only {
@@ -888,7 +908,7 @@ section { padding: 100px 60px; }
 /* Messaggio di stato del form (successo / errore) */
 .form-status {
   margin-top: 16px;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.5;
   text-align: center;
 }
@@ -911,12 +931,12 @@ footer {
 }
 
 footer .footer-copy {
-  font-size: 12px;
+  font-size: 0.75rem;
   color: var(--gray);
 }
 
 footer .footer-legal {
-  font-size: 12px;
+  font-size: 0.75rem;
   color: var(--gray);
 }
 
@@ -928,18 +948,18 @@ footer .footer-legal a {
 footer .footer-brand { color: var(--white); font-weight: 600; }
 
 /* ─── MOTION ─── */
-.reveal {
+.js .reveal {
   opacity: 0;
   transform: translateY(18px);
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-.reveal.in { opacity: 1; transform: none; }
+.js .reveal.in { opacity: 1; transform: none; }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .reveal { opacity: 1; transform: none; transition: none; }
-  .saturday-grid li { opacity: 1; transform: none; transition: none; }
+  .js .reveal { opacity: 1; transform: none; transition: none; }
+  .js .saturday-grid li { opacity: 1; transform: none; transition: none; }
 }
 
 /* ─── RESPONSIVE ─── */
@@ -959,7 +979,7 @@ footer .footer-brand { color: var(--white); font-weight: 600; }
   .hero-panel { display: grid; grid-template-columns: 1fr 1fr; column-gap: 24px; }
   .hero-panel-k { grid-column: 1 / -1; margin-bottom: 6px; }
   .hero-stat:nth-last-child(2) { border-bottom: 0; padding-bottom: 0; }
-  .hero-stat b { font-size: 34px; }
+  .hero-stat b { font-size: 2.125rem; }
   .eco-header { grid-template-columns: 1fr; }
   .steps-grid { grid-template-columns: 1fr; }
   .founders-grid { grid-template-columns: 1fr; max-width: 400px; }
@@ -967,7 +987,7 @@ footer .footer-brand { color: var(--white); font-weight: 600; }
   .form-row { grid-template-columns: 1fr; gap: 0 16px; }
   .form-box { padding: 28px 20px; }
   .form-group input,
-  .form-group select { font-size: 16px; }
+  .form-group select { font-size: 1rem; }
   .tc-label { flex-direction: column; gap: 2px; }
   .tc-legend { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 16px; }
   .saturday { grid-template-columns: 1fr; gap: 16px; margin-top: 64px; }
@@ -975,6 +995,6 @@ footer .footer-brand { color: var(--white); font-weight: 600; }
   #candidatura { padding: 70px 24px; }
   footer { flex-direction: column; gap: 12px; text-align: center; padding: 24px; }
   .timechart { padding: 30px 22px; }
-  .tc-seg { font-size: 11px; }
+  .tc-seg { font-size: 0.6875rem; }
   .tc-seg small { display: none; }
 }
