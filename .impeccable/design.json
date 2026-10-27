@@ -1,0 +1,324 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-27T16:00:00Z",
+  "title": "Design System: Zelo Real Estate — Recruiting LP2",
+  "extensions": {
+    "colorMeta": {
+      "terracotta": {
+        "role": "primary",
+        "displayName": "Terracotta Zelo",
+        "tonalRamp": [
+          "#33251a",
+          "#573d28",
+          "#825735",
+          "#b07140",
+          "#c48e64",
+          "#d1af94",
+          "#e1cfc1",
+          "#f4efeb"
+        ]
+      },
+      "terracotta-dark": {
+        "role": "primary",
+        "displayName": "Terracotta Cotta"
+      },
+      "terracotta-text": {
+        "role": "primary",
+        "displayName": "Terracotta Bruciata",
+        "purpose": "Large accent text only: headline highlights and stat numerals."
+      },
+      "accent-ink": {
+        "role": "secondary",
+        "displayName": "Inchiostro Bruno",
+        "tonalRamp": [
+          "#342519",
+          "#593e27",
+          "#845833",
+          "#b3733d",
+          "#c69062",
+          "#d2b093",
+          "#e2d0c1",
+          "#f4efeb"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Inchiostro",
+        "tonalRamp": [
+          "#262626",
+          "#404040",
+          "#5c5c5c",
+          "#787878",
+          "#949494",
+          "#b2b2b2",
+          "#d1d1d1",
+          "#f0f0f0"
+        ]
+      },
+      "ink-soft": {
+        "role": "neutral",
+        "displayName": "Inchiostro Tenue"
+      },
+      "ink-mute": {
+        "role": "neutral",
+        "displayName": "Grigio Caldo"
+      },
+      "page": {
+        "role": "neutral",
+        "displayName": "Carta Crema",
+        "tonalRamp": [
+          "#31271c",
+          "#54422c",
+          "#7c5f3b",
+          "#a77c48",
+          "#bc986b",
+          "#ccb599",
+          "#ded2c4",
+          "#f3f0ec"
+        ]
+      },
+      "cream": {
+        "role": "neutral",
+        "displayName": "Crema"
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Foglio"
+      },
+      "surface-2": {
+        "role": "neutral",
+        "displayName": "Crema Profonda"
+      },
+      "footer-dark": {
+        "role": "neutral",
+        "displayName": "Notte"
+      },
+      "gray": {
+        "role": "neutral",
+        "displayName": "Grigio Footer"
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Hairline"
+      },
+      "line-2": {
+        "role": "neutral",
+        "displayName": "Hairline Marcata"
+      },
+      "error": {
+        "role": "neutral",
+        "displayName": "Rosso Errore",
+        "purpose": "Form error text and invalid borders only."
+      },
+      "dark": {
+        "role": "neutral",
+        "displayName": "Nero Etichetta"
+      },
+      "chart-1": {
+        "role": "neutral",
+        "displayName": "Grigio Grafico 1"
+      },
+      "chart-2": {
+        "role": "neutral",
+        "displayName": "Grigio Grafico 2"
+      },
+      "chart-3": {
+        "role": "neutral",
+        "displayName": "Grigio Grafico 3"
+      },
+      "chart-coord": {
+        "role": "neutral",
+        "displayName": "Terracotta Velato"
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Hero H1 and Candidatura H2; second clause in terracotta."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section H2s with at most one terracotta word."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Card titles, form title, founder names."
+      },
+      "numeral": {
+        "displayName": "Numeral",
+        "purpose": "Hero stats (terracotta) and pillar/step indices (pale terracotta)."
+      },
+      "lead": {
+        "displayName": "Lead",
+        "purpose": "Hero sub only."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Card copy and section subs."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Uppercase tracked eyebrows, nav, form labels."
+      },
+      "button": {
+        "displayName": "Button",
+        "purpose": "Uppercase tracked CTA labels."
+      }
+    },
+    "shadows": [
+      {
+        "name": "card-rest",
+        "value": "0 4px 30px rgba(20,20,20,0.05)",
+        "purpose": "Pain and pillar cards at rest."
+      },
+      {
+        "name": "card-hover",
+        "value": "0 10px 40px rgba(20,20,20,0.09)",
+        "purpose": "Pillar card hover, with terracotta top rule."
+      },
+      {
+        "name": "form-lift",
+        "value": "0 16px 50px rgba(29,27,25,0.08)",
+        "purpose": "Application form box."
+      },
+      {
+        "name": "panel-lift",
+        "value": "0 24px 60px rgba(29,27,25,0.10)",
+        "purpose": "Hero stats panel, most elevated element."
+      }
+    ],
+    "motion": [
+      {
+        "name": "reveal",
+        "value": "opacity 0.6s ease, transform 0.6s ease (translateY 18px → 0)",
+        "purpose": "Section entry on scroll; disabled under prefers-reduced-motion."
+      },
+      {
+        "name": "button-hover",
+        "value": "background 0.2s, transform 0.15s (translateY -1px)",
+        "purpose": "Primary and submit button hover."
+      },
+      {
+        "name": "card-hover",
+        "value": "border-color 0.3s, box-shadow 0.3s",
+        "purpose": "Pillar card hover lift."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "mobile",
+        "value": "900px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Main CTA: terracotta block, ink caps, square corners.",
+      "html": "<a href=\"#\" class=\"ds-btn-primary\">Candidati come Agente →</a>",
+      "css": ".ds-btn-primary { display: inline-block; background: #d09f79; color: #0d0d0d; font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; padding: 16px 36px; border: none; border-radius: 0; text-decoration: none; cursor: pointer; transition: background 0.2s, transform 0.15s; } .ds-btn-primary:hover { background: #b8845c; transform: translateY(-1px); } .ds-btn-primary:focus-visible { outline: 2px solid #6b4423; outline-offset: 3px; }"
+    },
+    {
+      "name": "Text Input",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Field with 12px uppercase label, cream fill, accent-ink focus, inline error below.",
+      "html": "<div class=\"ds-field\"><label class=\"ds-label\" for=\"ds-tel\">Telefono *</label><input class=\"ds-input\" id=\"ds-tel\" value=\"abc\" aria-invalid=\"true\" aria-describedby=\"ds-err\" /><p class=\"ds-error\" id=\"ds-err\">Controlla il numero: usa cifre, spazi e prefisso, es. +39 333 123 4567.</p></div>",
+      "css": ".ds-field { width: 300px; } .ds-label { display: block; font-family: 'Inter', sans-serif; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #43403b; margin-bottom: 8px; } .ds-input { width: 100%; box-sizing: border-box; background: #f2ece3; border: 1px solid rgba(29,27,25,0.16); border-radius: 0; color: #141414; font-family: 'Inter', sans-serif; font-size: 14px; padding: 13px 16px; transition: border-color 0.2s; } .ds-input::placeholder { color: #6f675f; } .ds-input:focus { border-color: #6b4423; } .ds-input:focus-visible { outline: 2px solid #6b4423; outline-offset: 1px; } .ds-input[aria-invalid='true'] { border-color: #b3261e; } .ds-error { margin: 6px 0 0; font-family: 'Inter', sans-serif; font-size: 13px; line-height: 1.4; color: #b3261e; }"
+    },
+    {
+      "name": "Navigation",
+      "kind": "nav",
+      "description": "Fixed translucent white bar: logo, tracked caps links, compact CTA.",
+      "html": "<nav class=\"ds-nav\"><span class=\"ds-nav-logo\">ZELO</span><ul class=\"ds-nav-links\"><li><a href=\"#\">Agenti</a></li><li><a href=\"#\">Il Percorso</a></li><li><a href=\"#\">Chi Siamo</a></li></ul><a href=\"#\" class=\"ds-nav-cta\">Candidati Ora</a></nav>",
+      "css": ".ds-nav { display: flex; align-items: center; justify-content: space-between; padding: 20px 40px; background: rgba(255,255,255,0.95); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(29,27,25,0.10); } .ds-nav-logo { font-family: 'Playfair Display', serif; font-weight: 700; letter-spacing: 0.08em; color: #141414; } .ds-nav-links { display: flex; gap: 36px; list-style: none; margin: 0; padding: 0; } .ds-nav-links a { font-family: 'Inter', sans-serif; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: #141414; text-decoration: none; transition: color 0.2s; } .ds-nav-links a:hover { color: #6b4423; } .ds-nav-cta { background: #d09f79; color: #0d0d0d; font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; padding: 12px 24px; text-decoration: none; transition: background 0.2s; } .ds-nav-cta:hover { background: #b8845c; }"
+    },
+    {
+      "name": "Stats Panel",
+      "kind": "custom",
+      "description": "Signature hero panel: most elevated sheet, terracotta serif numerals split by hairlines.",
+      "html": "<aside class=\"ds-stats\"><p class=\"ds-stats-k\">I numeri dal 2021</p><div class=\"ds-stat\"><b>70M€</b><span>Intermediati dal 2021</span></div><div class=\"ds-stat\"><b>137</b><span>Transazioni concluse</span></div><div class=\"ds-stat\"><b>400</b><span>Clienti</span></div></aside>",
+      "css": ".ds-stats { max-width: 340px; background: #ffffff; border: 1px solid rgba(208,159,121,0.28); padding: 44px 40px; box-shadow: 0 24px 60px rgba(29,27,25,0.10); } .ds-stats-k { font-family: 'Inter', sans-serif; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: #6b4423; margin: 0 0 26px; } .ds-stat { padding: 20px 0; border-bottom: 1px solid rgba(29,27,25,0.10); } .ds-stat:last-child { border-bottom: 0; padding-bottom: 0; } .ds-stat b { display: block; font-family: 'Playfair Display', serif; font-weight: 900; font-size: 42px; line-height: 1; color: #a86f42; margin-bottom: 8px; } .ds-stat span { font-family: 'Inter', sans-serif; font-size: 13px; color: #43403b; line-height: 1.5; }"
+    },
+    {
+      "name": "32 Visite Band",
+      "kind": "custom",
+      "description": "Signature proof band: giant numeral, headline, and 32 squares that fill in sequence.",
+      "html": "<div class=\"ds-sat\"><div class=\"ds-sat-num\">32</div><div><h3 class=\"ds-sat-h\">visite in un solo sabato.</h3><ol class=\"ds-sat-grid\"><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li></ol></div></div>",
+      "css": ".ds-sat { display: grid; grid-template-columns: auto 1fr; gap: 32px; align-items: start; } .ds-sat-num { font-family: 'Playfair Display', serif; font-weight: 900; font-size: 140px; line-height: 0.8; letter-spacing: -0.04em; color: #a86f42; } .ds-sat-h { font-family: 'Playfair Display', serif; font-size: 32px; font-weight: 700; margin: 0 0 18px; color: #141414; } .ds-sat-grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(16, 14px); gap: 6px; } .ds-sat-grid li { aspect-ratio: 1; background: #d09f79; }"
+    },
+    {
+      "name": "Problem → Answer Ledger",
+      "kind": "custom",
+      "description": "One row per problem: today's pain on the page, an arrow, Zelo's answer on a white sheet.",
+      "html": "<div class=\"ds-ledger\"><div class=\"ds-l-today\"><h3>Lead non qualificati</h3><p>Ore spese in visite a vuoto con persone che non compreranno mai.</p></div><svg class=\"ds-l-arrow\" viewBox=\"0 0 24 24\"><path d=\"M4 12h15M13 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\"/></svg><div class=\"ds-l-zelo\"><h3>Pre-qualifica del cliente</h3><p>Un evento attorno all'immobile, con acquirenti pre-qualificati.</p></div></div>",
+      "css": ".ds-ledger { display: grid; grid-template-columns: 1fr 48px 1fr; align-items: center; max-width: 760px; border-bottom: 1px solid rgba(29,27,25,0.10); } .ds-ledger h3 { font-family: 'Playfair Display', serif; font-weight: 700; margin: 0 0 8px; } .ds-ledger p { font-family: 'Inter', sans-serif; font-size: 14px; line-height: 1.7; color: #43403b; margin: 0; } .ds-l-today { padding: 30px 0; } .ds-l-today h3 { font-size: 19px; color: #43403b; } .ds-l-zelo { background: #fff; padding: 30px 32px; box-shadow: 0 4px 30px rgba(20,20,20,0.05); } .ds-l-zelo h3 { font-size: 22px; color: #141414; } .ds-l-arrow { width: 24px; height: 24px; color: #a86f42; justify-self: center; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "Lo Studio di Selezione",
+    "overview": "The page feels like a boutique selection studio: warm cream paper, white sheets laid on top of it, a high-contrast serif that speaks with authority, and a single terracotta signature that marks what matters. Everything is squared off and precise, like a tailored dossier handed to an experienced professional. It never reads like a mass job board. The LP takes the parent site's palette (terracotta and the house logo) but deliberately keeps its own voice. The serif and the boxed cards set it apart from the main zelore.it site, whose type is a geometric sans and which uses pill buttons and a fixed terracotta side rail. That distinction is intentional, not drift.",
+    "keyCharacteristics": [
+      "Cream page (#f7f2ec), with white cards and a light shadow layered on top.",
+      "Playfair Display for every headline, numeral and card title; Inter for everything else.",
+      "One accent colour, terracotta: the light tone fills CTAs, and a deeper tone of the same hue colours highlighted words and numbers.",
+      "Square corners everywhere; the only circles are founder portraits.",
+      "Spaced uppercase only for small functional text (nav, buttons, form labels, the stats panel caption), never as an eyebrow above a heading."
+    ],
+    "rules": [
+      {
+        "name": "The One Signature Rule",
+        "body": "Terracotta is the only chromatic accent. A second hue (blue, green, a brighter orange) never enters the page. Within a section, terracotta marks at most one word of the headline plus the CTA.",
+        "section": "colors"
+      },
+      {
+        "name": "The Ink-on-Terracotta Rule",
+        "body": "Text on a terracotta fill is always ink (near-black), never white. White on #d09f79 fails contrast.",
+        "section": "colors"
+      },
+      {
+        "name": "The Fill-Not-Text Rule",
+        "body": "The light terracotta (#d09f79) is a fill and stroke colour, never a text colour on light backgrounds. Large accent text (headline highlights, numerals) uses terracotta-text; small accent text (anything under 24px regular or 18.66px bold) uses accent-ink. Light terracotta text is allowed only on the dark footer.",
+        "section": "colors"
+      },
+      {
+        "name": "The Serif-Speaks Rule",
+        "body": "Anything that makes a claim (headline, number, card title, quote) is set in Playfair. Anything that explains or labels is set in Inter.",
+        "section": "typography"
+      },
+      {
+        "name": "The Spaced Caps Rule",
+        "body": "Uppercase only appears small (≤13px) and always tracked (≥0.1em). Never set uppercase Playfair.",
+        "section": "typography"
+      },
+      {
+        "name": "The Paper Not Plastic Rule",
+        "body": "Shadows are diffuse and warm-tinted (rgba of 20,20,20 or 29,27,25), with blur ≥30px and opacity ≤10%. No tight drop shadows and no coloured glows on components.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Tailored Corner Rule",
+        "body": "Every container is squared off. A rounded button or card would read as the parent site's pill language and break the LP's distinct tone.",
+        "section": "shapes"
+      }
+    ],
+    "dos": [
+      "Do set every headline, numeral and card title in Playfair Display (700/900), and all supporting copy in Inter.",
+      "Do highlight one word or clause per headline in terracotta-text (#a86f42), and keep the rest in ink.",
+      "Do put ink (#141414) text on terracotta fills.",
+      "Do use accent-ink (#6b4423) for small accent text such as roles, the \"Da Zelo\" tags and the focus ring.",
+      "Do keep corners square and lift white cards off cream with the shadow vocabulary above.",
+      "Do alternate page and cream bands between sections.",
+      "Do let headings stand alone: no eyebrow label above a section heading."
+    ],
+    "donts": [
+      "Don't round buttons or cards. Pills belong to the parent site; the LP is squared off by design.",
+      "Don't introduce a second accent hue or use gradients on components.",
+      "Don't set any text in the light terracotta (#d09f79) on cream or white; it is 2.1–2.4:1. Use terracotta-text for large text and accent-ink for small text.",
+      "Don't use hard or dark shadows. Blur stays ≥30px and opacity ≤10%.",
+      "Don't set uppercase in Playfair, or set untracked uppercase."
+    ]
+  }
+}
