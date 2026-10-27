@@ -752,19 +752,21 @@ section { padding: 100px var(--edge); }
 }
 
 .punti-list li {
-  display: flex;
-  align-items: center;
-  gap: 14px;
+  position: relative;
+  padding-left: 20px;
   font-size: 0.875rem;
+  line-height: 1.6;
   color: var(--ink-soft);
 }
 
 .punti-list li::before {
   content: '';
+  position: absolute;
+  left: 0;
+  top: 0.6em;
   width: 6px;
   height: 6px;
   background: var(--terracotta);
-  flex-shrink: 0;
 }
 
 .form-box {
@@ -1032,6 +1034,13 @@ footer .footer-brand { color: var(--white); font-weight: 600; }
 }
 
 /* ─── RESPONSIVE ─── */
+/* Portatili piccoli (901–1100px): layout desktop, ma il form prende più spazio */
+@media (max-width: 1100px) {
+  .candidatura-inner { grid-template-columns: 5fr 6fr; gap: 56px; }
+  .form-box { padding: 40px; }
+  .hero-grid { gap: 48px; }
+}
+
 @media (max-width: 900px) {
   nav { padding: 16px 24px; }
   nav .nav-links { display: none; }
@@ -1077,4 +1086,36 @@ footer .footer-brand { color: var(--white); font-weight: 600; }
   .timechart { padding: 30px 22px; }
   .tc-seg { font-size: 0.6875rem; }
   .tc-seg small { display: none; }
+}
+
+/* Tablet (600–900px): non un telefono allargato. Margini più ampi, menu visibile,
+   due colonne dove il contenuto le regge. */
+@media (min-width: 600px) and (max-width: 900px) {
+  nav { padding: 16px 40px; }
+  nav .nav-links { display: flex; gap: 24px; }
+  nav .nav-links a { font-size: 0.75rem; }
+  section { padding: 80px 40px; }
+  #hero { padding: 140px 40px 80px; }
+  .hero-stat b { font-size: 2.5rem; }
+
+  .ledger-head { display: grid; grid-template-columns: 1fr 32px 1fr; }
+  .ledger-head span:last-child { padding-left: 24px; }
+  .ledger-row { grid-template-columns: 1fr 32px 1fr; padding: 0; }
+  .ledger-arrow { display: block; width: 20px; height: 20px; }
+  .ledger-tag { display: none; }
+  .ledger-cell { padding: 26px 0; }
+  .ledger-zelo { padding: 24px; }
+
+  .saturday { grid-template-columns: auto 1fr; gap: 32px; }
+  .saturday-num { font-size: 8.75rem; }
+  .saturday-grid { grid-template-columns: repeat(16, 1fr); max-width: 440px; }
+
+  /* Passi: numero a sinistra, testo a destra, così le righe non diventano lunghissime */
+  .step-card { display: grid; grid-template-columns: 96px 1fr; column-gap: 24px; padding: 32px; }
+  .step-num { grid-row: 1 / span 2; margin-bottom: 0; }
+
+  .founders-grid { grid-template-columns: 1fr 1fr; max-width: none; gap: 40px; }
+
+  .form-row { grid-template-columns: 1fr 1fr; }
+  .form-box { padding: 36px 32px; }
 }

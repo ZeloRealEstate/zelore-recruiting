@@ -193,7 +193,11 @@ The layout uses a full-bleed section model with alternating background bands: pa
 
 ### Named Rules
 **The One Edge Rule.** Every section's content starts on the same left edge as the logo and the hero headline. Nothing is centred as a block unless the whole section is centred.
-- **Single breakpoint at 900px:** every grid collapses to one column, the nav links hide (logo and CTA stay), the form rows stack and the footer centres.
+- **Three ranges, not one breakpoint:**
+  - **Desktop (>1100px):** the full layout.
+  - **Small laptop (901–1100px):** same layout; the Candidatura columns become 5fr/6fr with a 56px gap and the form box drops to 40px padding, so name/phone fields stay ≥180px wide.
+  - **Tablet (600–900px):** not a stretched phone. 40px side margins, nav links visible (12px), the ledger keeps its two columns with a smaller arrow, the "32" band keeps the numeral beside the text, step cards put the numeral left and the text right, founders sit side by side, form rows stay in pairs. The hero, timechart and portfolio use the stacked versions.
+  - **Phone (<600px):** one column everywhere, 24px margins, nav links hidden (logo and CTA stay), ledger and form rows stacked, footer centred.
 - Anchored sections use `scroll-margin-top: 88px` to clear the fixed nav.
 
 ## Elevation & Depth
