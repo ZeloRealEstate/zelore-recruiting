@@ -631,57 +631,45 @@ section { padding: 100px var(--edge); }
 }
 
 /* ─── FONDATORI ─── */
-#fondatori {
-  background: var(--page-2);
-  text-align: center;
-}
+#fondatori { background: var(--page-2); }
 
-/* Centra il blocco titolo (altrimenti il box max-width resta a sinistra) */
-#fondatori .sec-head {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.founders-grid {
+/* Ritratti grandi e la loro frase accanto: chi legge sceglie con chi lavorare */
+.founders {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 60px;
-  max-width: 800px;
-  margin: 60px auto 0;
+  grid-template-columns: 1fr 1fr 1.15fr;
+  gap: 32px;
+  align-items: start;
 }
 
-.founder-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
+.founder { display: flex; flex-direction: column; }
 
-.founder-avatar {
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  background: var(--surface-2);
-  border: 2px solid rgba(208,159,121,0.4);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2rem;
-  margin-bottom: 20px;
+/* Le foto sono scontornate su bianco: il multiply le appoggia sul fondo crema */
+.founder-photo {
+  background: var(--cream);
+  aspect-ratio: 8 / 9;
   overflow: hidden;
 }
 
-.founder-avatar img {
+.founder-photo img {
+  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center bottom;
+  mix-blend-mode: multiply;
+}
+
+.founder figcaption {
+  padding-top: 20px;
+  border-top: 1px solid var(--line-2);
+  margin-top: 20px;
 }
 
 .founder-name {
   font-family: 'Playfair Display', serif;
-  font-size: 1.25rem;
+  font-size: 1.625rem;
   font-weight: 700;
-  margin-bottom: 4px;
+  line-height: 1.2;
 }
 
 .founder-role {
@@ -689,7 +677,7 @@ section { padding: 100px var(--edge); }
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--accent-ink);
-  margin-bottom: 16px;
+  margin: 6px 0 14px;
 }
 
 .founder-bio {
@@ -699,15 +687,30 @@ section { padding: 100px var(--edge); }
 }
 
 .founders-quote {
-  margin-top: 60px;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 32px;
+  border-left: 1px solid var(--line-2);
+}
+
+.founders-quote p:first-child {
   font-family: 'Playfair Display', serif;
-  font-size: 1.125rem;
-  font-style: italic;
+  font-weight: 700;
+  font-size: clamp(1.5rem, 2.2vw, 2.125rem);
+  line-height: 1.25;
+  color: var(--ink);
+}
+
+.founders-quote em { font-style: normal; color: var(--terracotta-text); }
+
+.founders-quote .founders-quote-by {
+  margin-top: 24px;
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
   color: var(--ink-soft);
-  max-width: 560px;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
 }
 
 /* ─── CANDIDATURA ─── */
@@ -1059,7 +1062,9 @@ footer .footer-brand { color: var(--white); font-weight: 600; }
   .hero-stat:nth-last-child(2) { border-bottom: 0; padding-bottom: 0; }
   .hero-stat b { font-size: 2.125rem; }
   .steps-grid { grid-template-columns: 1fr; }
-  .founders-grid { grid-template-columns: 1fr; max-width: 400px; }
+  .founders { grid-template-columns: 1fr; gap: 40px; }
+  .founders-quote { order: -1; padding-left: 0; border-left: 0; padding-top: 0; }
+  .founder-photo { aspect-ratio: 1 / 1; }
   .candidatura-inner { grid-template-columns: 1fr; gap: 48px; }
   .form-row { grid-template-columns: 1fr; gap: 0 16px; }
   .form-box { padding: 28px 20px; }
@@ -1114,7 +1119,9 @@ footer .footer-brand { color: var(--white); font-weight: 600; }
   .step-card { display: grid; grid-template-columns: 96px 1fr; column-gap: 24px; padding: 32px; }
   .step-num { grid-row: 1 / span 2; margin-bottom: 0; }
 
-  .founders-grid { grid-template-columns: 1fr 1fr; max-width: none; gap: 40px; }
+  .founders { grid-template-columns: 1fr 1fr; gap: 32px; }
+  .founders-quote { grid-column: 1 / -1; }
+  .founder-photo { aspect-ratio: 8 / 9; }
 
   .form-row { grid-template-columns: 1fr 1fr; }
   .form-box { padding: 36px 32px; }

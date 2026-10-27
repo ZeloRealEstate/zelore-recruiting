@@ -122,7 +122,7 @@ The LP takes the parent site's palette (terracotta and the house logo) but delib
 - Cream page (#f7f2ec), with white cards and a light shadow layered on top.
 - Playfair Display for every headline, numeral and card title; Inter for everything else.
 - One accent colour, terracotta: the light tone fills CTAs, and a deeper tone of the same hue colours highlighted words and numbers.
-- Square corners everywhere; the only circles are founder portraits.
+- Square corners everywhere, with no exceptions.
 - Spaced uppercase only for small functional text (nav, buttons, form labels, the stats panel caption), never as an eyebrow above a heading.
 
 ## Colors
@@ -173,7 +173,7 @@ A warm, low-saturation earth palette: cream, near-black ink and one terracotta s
 - **Lead** (300, 18px, 1.7): hero sub only, max 560px wide.
 - **Body** (400, 14–16px, 1.65–1.75): card copy at 14px and section subs at 16px, max about 560px.
 - **Label** (400–700, 11–13px, 0.1–0.2em, UPPERCASE): nav, buttons, form labels (12px), founder roles (11px) and the stats panel caption. Never below 11px.
-- **Serif italic** (Playfair italic, 18px): the founders' quote.
+- **Pull-quote** (Playfair 700, clamp(24px, 2.2vw, 34px), 1.25): the founders' statement, with one clause in `terracotta-text`. No italics anywhere on the page.
 
 ### Named Rules
 **The Serif-Speaks Rule.** Anything that makes a claim (headline, number, card title, quote) is set in Playfair. Anything that explains or labels is set in Inter.
@@ -216,7 +216,7 @@ The hero also carries two very faint terracotta radial glows (8% and 5% opacity)
 
 ## Shapes
 
-Corners are square: radius 0 on buttons, cards, inputs and the "32 visite" squares. The only curve is the circular founder portrait (180px, with a 2px terracotta border at 40%). Structure comes from 1px hairlines. List bullets are 6px terracotta squares, not dots.
+Corners are square: radius 0 on buttons, cards, inputs and the "32 visite" squares. There are no curves. Structure comes from 1px hairlines. List bullets are 6px terracotta squares, not dots.
 
 ### Named Rules
 **The Tailored Corner Rule.** Every container is squared off. A rounded button or card would read as the parent site's pill language and break the LP's distinct tone.
@@ -261,7 +261,7 @@ A single focus ring is used everywhere: `outline: 2px solid accent-ink; outline-
 Copy the client has not confirmed yet sits in `<mark class="todo">[… DA CONFERMARE]</mark>`: a terracotta tint with bold accent-ink text, so it cannot ship unnoticed.
 
 ### Images
-Founder portraits ship as 360px WebP (about 10 KB each, 2× the 176px display) with explicit `width`/`height`, `loading="lazy"` and `decoding="async"`. The original JPGs stay in `assets/images` as sources only.
+Founder portraits ship as 760px WebP (27–40 KB each, about 2× the desktop display) with explicit `width`/`height`, `loading="lazy"` and `decoding="async"`. The original JPGs stay in `assets/images` as sources only.
 
 ### Navigation
 - Fixed white bar at 95% opacity with a 12px backdrop blur and a hairline bottom border. Padding is 20px 60px (16px 24px on mobile).
@@ -276,6 +276,9 @@ A comparison of horizontal 100% stacked bars, 46px high with square ends. The tr
 
 ### "32 visite" band (signature)
 The proof of the pre-qualification method, set apart from the cards. It sits directly on the cream page, with no card. A giant Playfair 900 "32" in `terracotta-text` sits beside the headline "visite in un solo sabato.", a short paragraph and a grid of 32 terracotta squares, one per viewing (16 per row on desktop, 8 on mobile). The squares fill in sequence (32ms apart, ease-out) when the band enters view. The band sits on the content edge (not centred) and has no button of its own: the "perché Zelo" block (Metodo, 32, Portfolio) closes with a single CTA at the end of the portfolio.
+
+### Founders (signature)
+The answer to "con chi lavorerai". Three columns on the content edge: two large portraits and the founders' statement. The photos are cut-outs on white, set on a `cream` panel (aspect 8:9) with `mix-blend-mode: multiply` so the white disappears into the cream; square corners, no border. Under each photo a hairline, then the name in Playfair 700 26px, the role in 11px tracked caps `accent-ink`, the bio in 14px ink-soft. The statement sits in the third column behind a 1px hairline rule, as a Playfair 700 pull-quote (24–34px) with "mettere al centro la persona." in `terracotta-text`, signed in 12px tracked caps. Below 900px the statement comes first, full width, then the portraits (side by side on tablet, stacked and 1:1 on phone).
 
 ### Portfolio (signature)
 Proof of the first pillar: six real closed operations from LP1, ordered by value. It is an editorial composition, not a grid of equal cards: on a 6-column grid the most valuable operation (Villa Trento) spans four columns and two rows, two sit beside it, three run underneath. Photos are 3:2, square-cornered, with no frame; the feature photo stretches to the height of the two beside it. Captions sit under the photo with a hairline below: name in Playfair 700 (18px, 24px on the feature), year in 13px ink-soft, value in Playfair 700 `terracotta-text` on the right (24px, 36px on the feature). Below 900px the feature goes full width, the rest sit two per row (the last full width), and captions stack. Photos ship as WebP (feature 1300px, others 800px) with lazy loading. Only real, closed operations go here: renders and listings never do.
