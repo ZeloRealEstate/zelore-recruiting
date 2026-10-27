@@ -28,6 +28,11 @@
   --ink-mute: #6f675f;     /* testo tenue (placeholder, didascalie): ≥4.7:1 su crema */
   --line: rgba(29,27,25,0.10);
   --line-2: rgba(29,27,25,0.16);
+
+  /* Contenitore unico: tutto il contenuto parte dalla stessa linea verticale.
+     Il margine laterale cresce sugli schermi larghi così il contenuto resta a 1180px. */
+  --content-max: 1180px;
+  --edge: max(60px, calc((100% - var(--content-max)) / 2));
 }
 
 html { scroll-behavior: smooth; }
@@ -64,7 +69,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 60px;
+  padding: 20px var(--edge);
   background: rgba(255,255,255,0.95);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--line);
@@ -122,7 +127,7 @@ nav .nav-links a:hover { color: var(--accent-ink); }
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 160px 60px 90px;
+  padding: 160px var(--edge) 90px;
   background: var(--page);
   position: relative;
   overflow: hidden;
@@ -134,8 +139,6 @@ nav .nav-links a:hover { color: var(--accent-ink); }
   gap: 64px;
   align-items: center;
   width: 100%;
-  max-width: 1180px;
-  margin: 0 auto;
   position: relative;
   z-index: 1;
 }
@@ -248,7 +251,7 @@ nav .nav-links a:hover { color: var(--accent-ink); }
 }
 
 /* ─── SECTION BASE ─── */
-section { padding: 100px 60px; }
+section { padding: 100px var(--edge); }
 
 .sec-head { max-width: 720px; margin-bottom: 56px; }
 .sec-head .section-h2 { margin-bottom: 18px; }
@@ -334,6 +337,19 @@ section { padding: 100px 60px; }
   min-width: 0;
 }
 
+.tc-seg { width: var(--w); overflow: hidden; }
+
+/* Le barre partono vuote e crescono fino alla percentuale reale quando il grafico entra in vista.
+   Prima la riga tradizionale, poi quella di Zelo: il confronto si legge nel tempo. */
+.js .timechart .tc-seg {
+  width: 0;
+  transition: width 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.35s;
+}
+
+.js .timechart .tc-row-zelo .tc-seg { transition-delay: 1s; }
+
+.js .timechart.in .tc-seg { width: var(--w); }
+
 .tc-seg small { font-weight: 500; opacity: 0.85; margin-left: 6px; }
 
 .seg-sale { background: var(--chart-1); color: var(--dark); }
@@ -366,29 +382,17 @@ section { padding: 100px 60px; }
 
 /* ─── CORSIA AGENTE ─── */
 /* Offset per le ancore, così la nav fissa non copre il titolo */
-#agente, #metodo, #percorso, #fondatori, #candidatura {
+#agente, #metodo, #portfolio, #percorso, #fondatori, #candidatura {
   scroll-margin-top: 88px;
 }
 
-.track-cta {
-  text-align: center;
-  margin-top: 56px;
-}
 
 /* ─── METODO / ECOSISTEMA ─── */
 #metodo {
   background: var(--page);
 }
 
-.eco-header {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  align-items: end;
-  margin-bottom: 70px;
-}
 
-.ledger { max-width: 1080px; }
 
 .ledger-head {
   display: grid;
@@ -454,9 +458,9 @@ section { padding: 100px 60px; }
   grid-template-columns: auto 1fr;
   gap: 40px;
   align-items: start;
-  max-width: 1040px;
-  margin: 88px auto 0;
+  margin-top: 96px;
 }
+
 
 .saturday-num {
   font-family: 'Playfair Display', serif;
@@ -505,6 +509,71 @@ section { padding: 100px 60px; }
 }
 
 .js .saturday.in .saturday-grid li { opacity: 1; transform: none; }
+
+/* ─── PORTFOLIO ─── */
+#portfolio { background: var(--page-2); }
+
+/* Composizione editoriale, non una griglia di card uguali:
+   l'operazione più importante è grande a sinistra, due accanto, tre sotto. Ordine per valore. */
+.pf-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 40px 28px;
+}
+
+.pf-item { grid-column: span 2; display: flex; flex-direction: column; }
+
+.pf-feature { grid-column: 1 / span 4; grid-row: 1 / span 2; }
+.pf-grid .pf-item:nth-child(2),
+.pf-grid .pf-item:nth-child(3) { grid-column: 5 / span 2; }
+
+.pf-img { overflow: hidden; background: var(--surface-2); }
+.pf-img img { display: block; width: 100%; height: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
+
+/* La foto grande riempie l'altezza delle due accanto */
+.pf-feature .pf-img { flex: 1; min-height: 0; }
+.pf-feature .pf-img img { aspect-ratio: auto; }
+
+.pf-item figcaption {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: baseline;
+  column-gap: 16px;
+  padding-top: 14px;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 12px;
+}
+
+.pf-name {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 1.25;
+}
+
+.pf-year {
+  grid-column: 1;
+  grid-row: 2;
+  font-size: 0.8125rem;
+  color: var(--ink-soft);
+  margin-top: 2px;
+}
+
+.pf-value {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  align-self: center;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--terracotta-text);
+  white-space: nowrap;
+}
+
+.pf-feature .pf-name { font-size: 1.5rem; }
+.pf-feature .pf-value { font-size: 2.25rem; }
+
+.pf-cta { margin-top: 56px; }
 
 /* ─── PERCORSO ─── */
 #percorso {
@@ -644,7 +713,6 @@ section { padding: 100px 60px; }
 /* ─── CANDIDATURA ─── */
 #candidatura {
   background: var(--page);
-  padding: 100px 60px;
 }
 
 .candidatura-inner {
@@ -924,7 +992,7 @@ main:focus { outline: none; }
 footer {
   background: var(--dark-2);
   border-top: 1px solid rgba(255,255,255,0.06);
-  padding: 32px 60px;
+  padding: 32px var(--edge);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -960,6 +1028,7 @@ footer .footer-brand { color: var(--white); font-weight: 600; }
   html { scroll-behavior: auto; }
   .js .reveal { opacity: 1; transform: none; transition: none; }
   .js .saturday-grid li { opacity: 1; transform: none; transition: none; }
+  .js .timechart .tc-seg { width: var(--w); transition: none; }
 }
 
 /* ─── RESPONSIVE ─── */
@@ -980,7 +1049,6 @@ footer .footer-brand { color: var(--white); font-weight: 600; }
   .hero-panel-k { grid-column: 1 / -1; margin-bottom: 6px; }
   .hero-stat:nth-last-child(2) { border-bottom: 0; padding-bottom: 0; }
   .hero-stat b { font-size: 2.125rem; }
-  .eco-header { grid-template-columns: 1fr; }
   .steps-grid { grid-template-columns: 1fr; }
   .founders-grid { grid-template-columns: 1fr; max-width: 400px; }
   .candidatura-inner { grid-template-columns: 1fr; gap: 48px; }
@@ -991,8 +1059,20 @@ footer .footer-brand { color: var(--white); font-weight: 600; }
   .tc-label { flex-direction: column; gap: 2px; }
   .tc-legend { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 16px; }
   .saturday { grid-template-columns: 1fr; gap: 16px; margin-top: 64px; }
+  .pf-grid { grid-template-columns: 1fr 1fr; gap: 28px 16px; }
+  .pf-item,
+  .pf-grid .pf-item:nth-child(2),
+  .pf-grid .pf-item:nth-child(3) { grid-column: auto; }
+  .pf-feature { grid-column: 1 / -1; grid-row: auto; }
+  .pf-feature .pf-img img { aspect-ratio: 3 / 2; }
+  .pf-grid .pf-item:last-child { grid-column: 1 / -1; }
+  .pf-item figcaption { grid-template-columns: 1fr; }
+  .pf-value { grid-column: 1; grid-row: auto; font-size: 1.25rem; margin-top: 4px; }
+  .pf-name { font-size: 1rem; }
+  .pf-feature .pf-name { font-size: 1.25rem; }
+  .pf-feature .pf-value { font-size: 1.75rem; }
+  .pf-cta { margin-top: 40px; }
   .saturday-grid { grid-template-columns: repeat(8, 1fr); max-width: 320px; }
-  #candidatura { padding: 70px 24px; }
   footer { flex-direction: column; gap: 12px; text-align: center; padding: 24px; }
   .timechart { padding: 30px 22px; }
   .tc-seg { font-size: 0.6875rem; }

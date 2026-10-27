@@ -21,6 +21,45 @@
   els.forEach(function (el) { io.observe(el); });
 })();
 
+// ─── Grafico "Dove finisce il tuo tempo": le percentuali contano fino al valore reale ───
+// Il conteggio segue la crescita delle barre (stessa durata e stesso ritardo del CSS).
+(function () {
+  var chart = document.querySelector('.timechart');
+  if (!chart) return;
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce || !('IntersectionObserver' in window) || !window.requestAnimationFrame) return;
+
+  var DURATION = 1200;
+  var nums = chart.querySelectorAll('.tc-num');
+  nums.forEach(function (n) { n.textContent = '0'; });
+
+  function easeOut(t) { return 1 - Math.pow(1 - t, 4); }
+
+  function count(el, delay) {
+    var to = parseInt(el.getAttribute('data-to'), 10);
+    var start = null;
+    setTimeout(function () {
+      function step(ts) {
+        if (start === null) start = ts;
+        var t = Math.min((ts - start) / DURATION, 1);
+        el.textContent = Math.round(to * easeOut(t));
+        if (t < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    }, delay);
+  }
+
+  var io = new IntersectionObserver(function (entries) {
+    if (!entries[0].isIntersecting) return;
+    io.disconnect();
+    nums.forEach(function (el) {
+      count(el, el.closest('.tc-row-zelo') ? 1000 : 350);
+    });
+  }, { threshold: 0.12 });
+
+  io.observe(chart);
+})();
+
 // ─── Invio candidatura al webhook n8n ───
 (function () {
   var WEBHOOK_URL = 'https://n8n.fyco.ai/webhook/6a7c1c4e-eb54-4ce4-8cdc-c052e66aa363';

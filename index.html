@@ -26,7 +26,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/style.css?v=8" />
+  <link rel="stylesheet" href="assets/css/style.css?v=11" />
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -105,17 +105,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="tc-row">
       <div class="tc-label"><b>Agenzia tradizionale</b><span>solo 2 ore su 10 dedicate alla vendita</span></div>
       <div class="tc-bar" role="img" aria-label="Agenzia tradizionale: 20% vendita attiva, 45% burocrazia e pratiche, 35% visite a vuoto">
-        <div class="tc-seg seg-sale" style="width:20%">20%</div>
-        <div class="tc-seg seg-admin" style="width:45%">45% <small>burocrazia</small></div>
-        <div class="tc-seg seg-waste" style="width:35%">35% <small>visite a vuoto</small></div>
+        <div class="tc-seg seg-sale" style="--w:20%"><span class="tc-num" data-to="20">20</span>%</div>
+        <div class="tc-seg seg-admin" style="--w:45%"><span class="tc-num" data-to="45">45</span>% <small>burocrazia</small></div>
+        <div class="tc-seg seg-waste" style="--w:35%"><span class="tc-num" data-to="35">35</span>% <small>visite a vuoto</small></div>
       </div>
     </div>
 
-    <div class="tc-row">
+    <div class="tc-row tc-row-zelo">
       <div class="tc-label"><b>Zelo Real Estate</b><span>8 ore su 10 dedicate alla vendita</span></div>
       <div class="tc-bar" role="img" aria-label="Zelo Real Estate: 80% vendita attiva, 20% relazione e coordinamento">
-        <div class="tc-seg seg-sale-hi" style="width:80%">80% <small>vendita attiva</small></div>
-        <div class="tc-seg seg-coord" style="width:20%">20%</div>
+        <div class="tc-seg seg-sale-hi" style="--w:80%"><span class="tc-num" data-to="80">80</span>% <small>vendita attiva</small></div>
+        <div class="tc-seg seg-coord" style="--w:20%"><span class="tc-num" data-to="20">20</span>%</div>
       </div>
     </div>
 
@@ -131,13 +131,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- ─── METODO ─── -->
 <section id="metodo">
-  <div class="eco-header reveal">
-    <div>
-      <h2 class="section-h2">Tutto al posto giusto, <em>seguendo un metodo.</em></h2>
-    </div>
-    <div>
-      <p class="section-sub">Una struttura costruita contro i tre problemi di chi vende immobili in Trentino. Non teoria: un metodo operativo collaudato dal 2021.</p>
-    </div>
+  <div class="sec-head reveal">
+    <h2 class="section-h2">Tutto al posto giusto, <em>seguendo un metodo.</em></h2>
+    <p class="section-sub">Una struttura costruita contro i tre problemi di chi vende immobili in Trentino. Non teoria: un metodo operativo collaudato dal 2021.</p>
   </div>
 
   <div class="ledger reveal">
@@ -171,7 +167,44 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
 
-  <div class="track-cta reveal">
+</section>
+
+<!-- ─── PORTFOLIO: prova del primo pilastro ─── -->
+<!-- DA CONFERMARE: anno di Appartamento Cles (LP1 dice 2023, il file della foto 2026) -->
+<section id="portfolio">
+  <div class="sec-head reveal">
+    <h2 class="section-h2">Il tipo di immobile <em>su cui lavorerai.</em></h2>
+    <p class="section-sub">Alcune operazioni chiuse da Zelo Real Estate: valori da 300.000€ a oltre 2 milioni, in tutto il Trentino.</p>
+  </div>
+
+  <div class="pf-grid reveal">
+      <figure class="pf-item pf-feature">
+        <div class="pf-img"><img src="assets/images/portfolio/villa-trento.webp" alt="Villa Trento, operazione chiusa da Zelo Real Estate nel 2024" width="1300" height="867" loading="lazy" decoding="async" /></div>
+        <figcaption><span class="pf-name">Villa Trento</span><span class="pf-year">2024</span><span class="pf-value">2.300.000€</span></figcaption>
+      </figure>
+      <figure class="pf-item">
+        <div class="pf-img"><img src="assets/images/portfolio/attico-torricelle.webp" alt="Attico Torricelle, operazione chiusa da Zelo Real Estate nel 2023" width="800" height="534" loading="lazy" decoding="async" /></div>
+        <figcaption><span class="pf-name">Attico Torricelle</span><span class="pf-year">2023</span><span class="pf-value">900.000€</span></figcaption>
+      </figure>
+      <figure class="pf-item">
+        <div class="pf-img"><img src="assets/images/portfolio/attico-mezzacorona.webp" alt="Attico Mezzacorona, operazione chiusa da Zelo Real Estate nel 2025" width="800" height="534" loading="lazy" decoding="async" /></div>
+        <figcaption><span class="pf-name">Attico Mezzacorona</span><span class="pf-year">2025</span><span class="pf-value">650.000€</span></figcaption>
+      </figure>
+      <figure class="pf-item">
+        <div class="pf-img"><img src="assets/images/portfolio/appartamento-trento.webp" alt="Appartamento Trento, operazione chiusa da Zelo Real Estate nel 2024" width="800" height="534" loading="lazy" decoding="async" /></div>
+        <figcaption><span class="pf-name">Appartamento Trento</span><span class="pf-year">2024</span><span class="pf-value">420.000€</span></figcaption>
+      </figure>
+      <figure class="pf-item">
+        <div class="pf-img"><img src="assets/images/portfolio/appartamento-cles.webp" alt="Appartamento Cles, operazione chiusa da Zelo Real Estate nel 2023" width="800" height="534" loading="lazy" decoding="async" /></div>
+        <figcaption><span class="pf-name">Appartamento Cles</span><span class="pf-year">2023</span><span class="pf-value">400.000€</span></figcaption>
+      </figure>
+      <figure class="pf-item">
+        <div class="pf-img"><img src="assets/images/portfolio/appartamento-aldeno.webp" alt="Appartamento Aldeno, operazione chiusa da Zelo Real Estate nel 2026" width="800" height="534" loading="lazy" decoding="async" /></div>
+        <figcaption><span class="pf-name">Appartamento Aldeno</span><span class="pf-year">2026</span><span class="pf-value">300.000€</span></figcaption>
+      </figure>
+  </div>
+
+  <div class="pf-cta reveal">
     <a href="#candidatura" class="btn-primary">Candidati come agente&nbsp;→</a>
   </div>
 </section>
@@ -340,7 +373,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="footer-legal"><a href="https://zelore.it/privacy-policy" target="_blank" rel="noopener">Privacy Policy</a></div>
 </footer>
 
-<script src="assets/js/main.js?v=7"></script>
+<script src="assets/js/main.js?v=8"></script>
 
 </body>
 </html>

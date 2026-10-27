@@ -184,12 +184,15 @@ A warm, low-saturation earth palette: cream, near-black ink and one terracotta s
 
 All font sizes are in `rem` (16px base) so text follows the user's browser text-size setting; spacing stays in px. Content sits in a single `<main id="main">`, reached by a "Vai al contenuto" skip link that appears on keyboard focus.
 
-The layout uses a full-bleed section model with alternating background bands: page → cream → page → cream → white → page → footer dark. Sections are padded 100px vertically and 60px horizontally; below 900px this drops to 70px and 24px. Content is bounded by `max-width` per block (hero grid 1180px, section heads 720px, founders 800px). There is no global container.
+The layout uses a full-bleed section model with alternating background bands: page (hero) → cream (Agente) → page (Metodo) → white (Portfolio) → cream (Percorso) → white (Fondatori) → page (Candidatura) → footer dark. Backgrounds run full-bleed, but all content (nav, hero, sections, footer) shares one 1180px content column: horizontal padding is `--edge` = `max(60px, (100% − 1180px) / 2)`, so every block starts on the same left edge and ends on the same right edge at any desktop width. Sections are padded 100px vertically; below 900px padding drops to 70px and 24px. Inside the column, text blocks keep their own measure (section heads 720px, founders 800px).
 
 - **Hero:** 1.15fr / 0.85fr grid. Copy sits on the left; the white stats panel sits on the right as a vertical list split by hairlines.
 - **Card rows:** three-column grids with gaps of 20–22px. The Percorso steps use a 2px gap so the white cards read as one segmented strip.
 - **Candidatura:** two equal columns with an 80px gap. The persuasion copy and bullet list sit left; the form box sits right.
-- **Section heads:** left-aligned by default. Percorso and Fondatori are centred.
+- **Section heads:** heading with its paragraph stacked underneath, left-aligned on the content edge (never a heading and paragraph split into two columns). Percorso and Fondatori are the only centred heads.
+
+### Named Rules
+**The One Edge Rule.** Every section's content starts on the same left edge as the logo and the hero headline. Nothing is centred as a block unless the whole section is centred.
 - **Single breakpoint at 900px:** every grid collapses to one column, the nav links hide (logo and CTA stay), the form rows stack and the footer centres.
 - Anchored sections use `scroll-margin-top: 88px` to clear the fixed nav.
 
@@ -268,10 +271,17 @@ A white sheet with the highest lift and a faint terracotta border (28%). A small
 A comparison of horizontal 100% stacked bars, 46px high with square ends. The traditional-agency bar uses the three chart greys. The Zelo bar uses terracotta for active selling and `chart-coord` for its 20% relazione e coordinamento, each with its own legend entry. Percent labels sit inside the segments in dark ink on every grey and terracotta segment, never white, with a square-dot legend below.
 
 ### "32 visite" band (signature)
-The proof of the pre-qualification method, set apart from the cards. It sits directly on the cream page, with no card. A giant Playfair 900 "32" in `terracotta-text` sits beside the headline "visite in un solo sabato.", a short paragraph and a grid of 32 terracotta squares, one per viewing (16 per row on desktop, 8 on mobile). It is the page's one authored motion moment: the squares fill in sequence (32ms apart, ease-out) when the band enters view.
+The proof of the pre-qualification method, set apart from the cards. It sits directly on the cream page, with no card. A giant Playfair 900 "32" in `terracotta-text` sits beside the headline "visite in un solo sabato.", a short paragraph and a grid of 32 terracotta squares, one per viewing (16 per row on desktop, 8 on mobile). The squares fill in sequence (32ms apart, ease-out) when the band enters view. The band sits on the content edge (not centred) and has no button of its own: the "perché Zelo" block (Metodo, 32, Portfolio) closes with a single CTA at the end of the portfolio.
+
+### Portfolio (signature)
+Proof of the first pillar: six real closed operations from LP1, ordered by value. It is an editorial composition, not a grid of equal cards: on a 6-column grid the most valuable operation (Villa Trento) spans four columns and two rows, two sit beside it, three run underneath. Photos are 3:2, square-cornered, with no frame; the feature photo stretches to the height of the two beside it. Captions sit under the photo with a hairline below: name in Playfair 700 (18px, 24px on the feature), year in 13px ink-soft, value in Playfair 700 `terracotta-text` on the right (24px, 36px on the feature). Below 900px the feature goes full width, the rest sit two per row (the last full width), and captions stack. Photos ship as WebP (feature 1300px, others 800px) with lazy loading. Only real, closed operations go here: renders and listings never do.
 
 ### Motion
-Sections fade up 18px over 0.6s ease as they enter the viewport (`.reveal` → `.in`). The hidden starting state applies only under `html.js`, set by an inline script in `<head>`, so without JavaScript every section and every "32" square is simply visible. The "32" squares are the only staggered animation. With `prefers-reduced-motion`, the reveal, the squares and smooth scroll are all disabled.
+Sections fade up 18px over 0.6s ease as they enter the viewport (`.reveal` → `.in`). The hidden starting state applies only under `html.js`, set by an inline script in `<head>`, so without JavaScript every section and every "32" square is simply visible. Two data moments carry their own motion, both tied to what they prove:
+- **Timechart:** the bars start empty and grow to their real percentages (1.2s, ease-out quart) while the labels count up from 0 in step. The traditional-agency row goes first (0.35s delay), the Zelo row follows (1s), so the comparison reads in time.
+- **"32" squares:** they fill in sequence, 32ms apart.
+
+No other element gets a staggered or counting animation. With `prefers-reduced-motion` or without JavaScript, bars, numbers and squares appear at their final state, and the reveal and smooth scroll are disabled.
 
 ## Do's and Don'ts
 

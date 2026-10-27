@@ -64,6 +64,8 @@ Founders, with photos in `assets/images/`:
 - Filippo Zeni, Co-Founder. Background in luxury and international hospitality.
 - Oliviero Rigotti, Co-Founder. Background in construction.
 
+Portfolio of closed operations (from LP1, photos in `assets/images/portfolio/`): Villa Trento 2024 · 2.300.000€, Attico Torricelle 2023 · 900.000€, Attico Mezzacorona 2025 · 650.000€, Appartamento Trento 2024 · 420.000€, Appartamento Cles 2023 · 400.000€ (year to confirm: the LP1 photo file says 2026), Appartamento Aldeno 2026 · 300.000€. `01_Residenza_Luna.jpg` in LP1 is a 3D render, not a closed operation, and must not be shown as one.
+
 Not on hand, and must not be invented: agent testimonials, specific commission or compensation figures, headcount, awards, or press.
 
 ## Product Principles
