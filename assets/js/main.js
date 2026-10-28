@@ -63,8 +63,8 @@
 // ─── Invio candidatura al webhook n8n ───
 (function () {
   var WEBHOOK_URL = 'https://n8n.fyco.ai/webhook/6a7c1c4e-eb54-4ce4-8cdc-c052e66aa363';
-  // DA CONFERMARE con il cliente: indirizzo da mostrare se l'invio non va a buon fine
-  var CONTACT_EMAIL = '[EMAIL DA CONFERMARE]';
+  // Indirizzo da mostrare se l'invio non va a buon fine
+  var CONTACT_EMAIL = 'info@zelore.it';
   var TIMEOUT_MS = 15000;
 
   var form = document.getElementById('candidatura-form');

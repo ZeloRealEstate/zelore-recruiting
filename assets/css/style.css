@@ -45,14 +45,6 @@ html { scroll-behavior: smooth; }
 
 ::selection { background: rgba(208,159,121,0.35); color: var(--ink); }
 
-/* Testi provvisori da confermare con il cliente: devono saltare all'occhio */
-mark.todo {
-  background: rgba(208,159,121,0.28);
-  color: var(--accent-ink);
-  font-weight: 600;
-  padding: 0 4px;
-}
-
 body {
   font-family: 'Inter', sans-serif;
   background: var(--page);
