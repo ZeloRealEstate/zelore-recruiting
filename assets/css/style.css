@@ -216,6 +216,9 @@ nav .nav-links a:hover { color: var(--accent-ink); }
   margin-bottom: 8px;
 }
 
+.hero-stat b small { font-size: 0.5em; font-weight: 700; }
+.hero-stat .nobr { white-space: nowrap; }
+
 .hero-stat span {
   font-size: 0.8125rem;
   color: var(--ink-soft);
@@ -567,6 +570,18 @@ section { padding: 100px var(--edge); }
 
 .pf-cta { margin-top: 56px; }
 
+/* Riga di foto (Open House, ufficio e team): invisibile finché non contiene immagini */
+.photo-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+  margin-top: 56px;
+}
+
+.photo-strip:not(:has(img)) { display: none; }
+.photo-strip figure { overflow: hidden; background: var(--surface-2); }
+.photo-strip img { display: block; width: 100%; height: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
+
 /* ─── PERCORSO ─── */
 #percorso {
   background: var(--cream);
@@ -588,7 +603,7 @@ section { padding: 100px var(--edge); }
 
 .steps-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 2px;
   position: relative;
 }
@@ -737,7 +752,7 @@ section { padding: 100px var(--edge); }
   margin-bottom: 20px;
 }
 
-.candidatura-left p:last-of-type { margin-bottom: 36px; }
+.candidatura-left h2 + p { margin-bottom: 36px; }
 
 .punti-list {
   list-style: none;
@@ -762,6 +777,15 @@ section { padding: 100px var(--edge); }
   width: 6px;
   height: 6px;
   background: var(--terracotta);
+}
+
+/* Nota sul compenso, sotto la lista: testo secondario ma in evidenza */
+.candidatura-left .punti-note {
+  margin: 32px 0 0;
+  padding-left: 18px;
+  border-left: 2px solid var(--terracotta);
+  color: var(--ink);
+  font-weight: 500;
 }
 
 .form-box {
@@ -796,6 +820,42 @@ section { padding: 100px var(--edge); }
 }
 
 .form-assurance strong { color: var(--accent-ink); }
+
+/* Chi cerchiamo: profilo richiesto, prima dei campi */
+.form-profile {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--ink-soft);
+  padding-left: 16px;
+  border-left: 2px solid var(--terracotta);
+  margin-bottom: 20px;
+}
+
+.form-profile strong { color: var(--accent-ink); }
+
+/* Video di Filippo: compare solo se configurato (vedi main.js) */
+.form-video { margin-bottom: 20px; background: var(--dark); }
+.form-video video { display: block; width: 100%; max-height: 520px; object-fit: contain; }
+
+/* Esito positivo: prende il posto del form */
+.form-success {
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--terracotta);
+  padding: 28px 24px;
+}
+
+.form-success:focus { outline: none; }
+
+.form-success-h {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.375rem;
+  font-weight: 700;
+  color: var(--accent-ink);
+  margin-bottom: 10px;
+}
+
+.form-success p:last-child { font-size: 0.9375rem; line-height: 1.65; color: var(--ink); }
 
 .form-noscript {
   font-size: 0.875rem;
@@ -1034,6 +1094,7 @@ footer .footer-brand { color: var(--white); font-weight: 600; }
   .candidatura-inner { grid-template-columns: 5fr 6fr; gap: 56px; }
   .form-box { padding: 40px; }
   .hero-grid { gap: 48px; }
+  .steps-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 900px) {
@@ -1083,6 +1144,12 @@ footer .footer-brand { color: var(--white); font-weight: 600; }
   .timechart { padding: 30px 22px; }
   .tc-seg { font-size: 0.6875rem; }
   .tc-seg small { display: none; }
+}
+
+/* Telefoni: il valore medio ("450.000 €") è più lungo degli altri numeri e va ridotto per stare su una riga */
+@media (max-width: 599px) {
+  .hero-stat b small { display: block; margin-bottom: 4px; }
+  .hero-stat .nobr { font-size: min(1em, 6.2vw); }
 }
 
 /* Tablet (600–900px): non un telefono allargato. Margini più ampi, menu visibile,
