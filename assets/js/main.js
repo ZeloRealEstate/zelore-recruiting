@@ -80,6 +80,21 @@
     return String(value == null ? '' : value).replace(/<[^>]*>/g, '').trim();
   }
 
+  // Esito positivo: il form lascia il posto al messaggio di conferma
+  function showSuccess() {
+    var success = document.getElementById('form-success');
+    if (!success) {
+      showStatus('Candidatura ricevuta.', 'success');
+      return;
+    }
+    var box = success.parentNode;
+    Array.prototype.forEach.call(box.children, function (el) {
+      if (el !== success && el.tagName !== 'NOSCRIPT') el.hidden = true;
+    });
+    success.hidden = false;
+    success.focus();
+  }
+
   function showStatus(message, kind) {
     if (!statusEl) return;
     statusEl.textContent = message;
@@ -174,7 +189,7 @@
     // Honeypot: se compilato è quasi certamente un bot. Mostriamo lo stesso esito
     // positivo per non segnalargli il filtro, ma non inviamo nulla.
     if (form.sito_web && form.sito_web.value.trim() !== '') {
-      showStatus('Candidatura ricevuta. Ti ricontattiamo al più presto.', 'success');
+      showSuccess();
       return;
     }
 
@@ -213,9 +228,7 @@
         form.reset();
         // Resta disabilitato: evita invii doppi della stessa candidatura
         setBusy(true, 'Candidatura inviata');
-        submitting = false;
-        showStatus('Candidatura ricevuta, ' + payload.nome + '. ' + document.getElementById('form-promise').textContent, 'success');
-        if (statusEl) { statusEl.tabIndex = -1; statusEl.focus(); }
+        showSuccess();
 
         // Evento dataLayer per il tag di conversione Google Ads in GTM.
         // Nome evento dedicato (diverso da "lead_form_submit" usato su LP1/LP3)
@@ -234,4 +247,22 @@
         if (button) button.innerHTML = buttonLabel;
       });
   });
+})();
+
+// ─── Video di Filippo nella candidatura ───
+// Compare solo se nell'HTML è indicato un file (data-src); altrimenti resta nascosto.
+(function () {
+  var box = document.querySelector('.form-video');
+  var src = box && box.getAttribute('data-src');
+  if (!src) return;
+
+  var video = document.createElement('video');
+  video.controls = true;
+  video.preload = 'metadata';
+  video.playsInline = true;
+  var poster = box.getAttribute('data-poster');
+  if (poster) video.poster = poster;
+  video.src = src;
+  box.appendChild(video);
+  box.hidden = false;
 })();
