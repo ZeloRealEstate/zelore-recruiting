@@ -216,10 +216,19 @@ nav .nav-links a:hover { color: var(--accent-ink); }
   margin-bottom: 8px;
 }
 
-.hero-stat b small { font-size: 0.5em; font-weight: 700; }
-.hero-stat .nobr { white-space: nowrap; }
+/* "oltre" come piccola etichetta sopra il numero, così il numero resta grande come gli altri */
+.hero-stat b small {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent-ink);
+  margin-bottom: 8px;
+}
 
-.hero-stat span {
+.hero-stat > span {
   font-size: 0.8125rem;
   color: var(--ink-soft);
   line-height: 1.5;
@@ -1144,12 +1153,6 @@ footer .footer-brand { color: var(--white); font-weight: 600; }
   .timechart { padding: 30px 22px; }
   .tc-seg { font-size: 0.6875rem; }
   .tc-seg small { display: none; }
-}
-
-/* Telefoni: il valore medio ("450.000 €") è più lungo degli altri numeri e va ridotto per stare su una riga */
-@media (max-width: 599px) {
-  .hero-stat b small { display: block; margin-bottom: 4px; }
-  .hero-stat .nobr { font-size: min(1em, 6.2vw); }
 }
 
 /* Tablet (600–900px): non un telefono allargato. Margini più ampi, menu visibile,
