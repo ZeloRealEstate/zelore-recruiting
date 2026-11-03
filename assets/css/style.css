@@ -46,7 +46,7 @@ html { scroll-behavior: smooth; }
 ::selection { background: rgba(208,159,121,0.35); color: var(--ink); }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: 'sofia-pro', sans-serif;
   background: var(--page);
   color: var(--ink);
   line-height: 1.6;
@@ -154,9 +154,9 @@ nav .nav-links a:hover { color: var(--accent-ink); }
 }
 
 .hero-h1 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'sofia-pro', sans-serif;
   font-size: clamp(2.5rem, 4.6vw, 4.25rem);
-  font-weight: 900;
+  font-weight: 600;
   line-height: 1.1;
   max-width: 640px;
   margin-bottom: 28px;
@@ -207,8 +207,8 @@ nav .nav-links a:hover { color: var(--accent-ink); }
 .hero-stat:last-child { border-bottom: 0; padding-bottom: 0; }
 
 .hero-stat b {
-  font-family: 'Playfair Display', serif;
-  font-weight: 900;
+  font-family: 'sofia-pro', sans-serif;
+  font-weight: 600;
   font-size: 2.625rem;
   display: block;
   line-height: 1;
@@ -219,7 +219,7 @@ nav .nav-links a:hover { color: var(--accent-ink); }
 /* "oltre" come piccola etichetta sopra il numero, così il numero resta grande come gli altri */
 .hero-stat b small {
   display: block;
-  font-family: 'Inter', sans-serif;
+  font-family: 'sofia-pro', sans-serif;
   font-size: 0.6875rem;
   font-weight: 600;
   letter-spacing: 0.14em;
@@ -261,9 +261,9 @@ section { padding: 100px var(--edge); }
 .sec-head .section-h2 { margin-bottom: 18px; }
 
 .section-h2 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'sofia-pro', sans-serif;
   font-size: clamp(2rem, 4vw, 3.375rem);
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.15;
   margin-bottom: 20px;
 }
@@ -297,9 +297,9 @@ section { padding: 100px var(--edge); }
 }
 
 .timechart > h3 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'sofia-pro', sans-serif;
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--dark);
   margin-bottom: 6px;
 }
@@ -424,8 +424,8 @@ section { padding: 100px var(--edge); }
 .ledger-cell { padding: 30px 0; }
 
 .ledger-cell h3 {
-  font-family: 'Playfair Display', serif;
-  font-weight: 700;
+  font-family: 'sofia-pro', sans-serif;
+  font-weight: 600;
   line-height: 1.25;
   margin-bottom: 8px;
 }
@@ -467,8 +467,8 @@ section { padding: 100px var(--edge); }
 
 
 .saturday-num {
-  font-family: 'Playfair Display', serif;
-  font-weight: 900;
+  font-family: 'sofia-pro', sans-serif;
+  font-weight: 600;
   font-size: clamp(7.5rem, 15vw, 13.125rem);
   line-height: 0.8;
   letter-spacing: -0.04em;
@@ -476,9 +476,9 @@ section { padding: 100px var(--edge); }
 }
 
 .saturday-h {
-  font-family: 'Playfair Display', serif;
+  font-family: 'sofia-pro', sans-serif;
   font-size: clamp(1.75rem, 3vw, 2.5rem);
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.15;
   margin-bottom: 14px;
 }
@@ -549,8 +549,8 @@ section { padding: 100px var(--edge); }
 }
 
 .pf-name {
-  font-family: 'Playfair Display', serif;
-  font-weight: 700;
+  font-family: 'sofia-pro', sans-serif;
+  font-weight: 600;
   font-size: 1.125rem;
   line-height: 1.25;
 }
@@ -567,8 +567,8 @@ section { padding: 100px var(--edge); }
   grid-column: 2;
   grid-row: 1 / span 2;
   align-self: center;
-  font-family: 'Playfair Display', serif;
-  font-weight: 700;
+  font-family: 'sofia-pro', sans-serif;
+  font-weight: 600;
   font-size: 1.5rem;
   color: var(--terracotta-text);
   white-space: nowrap;
@@ -624,18 +624,18 @@ section { padding: 100px var(--edge); }
 }
 
 .step-num {
-  font-family: 'Playfair Display', serif;
+  font-family: 'sofia-pro', sans-serif;
   font-size: 4rem;
-  font-weight: 900;
+  font-weight: 600;
   color: rgba(184,132,92,0.5);
   line-height: 1;
   margin-bottom: 16px;
 }
 
 .step-card h3 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'sofia-pro', sans-serif;
   font-size: 1.375rem;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--dark);
   margin-bottom: 14px;
 }
@@ -682,9 +682,9 @@ section { padding: 100px var(--edge); }
 }
 
 .founder-name {
-  font-family: 'Playfair Display', serif;
+  font-family: 'sofia-pro', sans-serif;
   font-size: 1.625rem;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.2;
 }
 
@@ -712,8 +712,8 @@ section { padding: 100px var(--edge); }
 }
 
 .founders-quote p:first-child {
-  font-family: 'Playfair Display', serif;
-  font-weight: 700;
+  font-family: 'sofia-pro', sans-serif;
+  font-weight: 600;
   font-size: clamp(1.5rem, 2.2vw, 2.125rem);
   line-height: 1.25;
   color: var(--ink);
@@ -742,9 +742,9 @@ section { padding: 100px var(--edge); }
 }
 
 .candidatura-left h2 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'sofia-pro', sans-serif;
   font-size: clamp(2rem, 4vw, 3.25rem);
-  font-weight: 900;
+  font-weight: 600;
   line-height: 1.1;
   margin-bottom: 20px;
 }
@@ -805,9 +805,9 @@ section { padding: 100px var(--edge); }
 }
 
 .form-title {
-  font-family: 'Playfair Display', serif;
+  font-family: 'sofia-pro', sans-serif;
   font-size: 1.375rem;
-  font-weight: 700;
+  font-weight: 600;
   margin-bottom: 8px;
 }
 
@@ -857,9 +857,9 @@ section { padding: 100px var(--edge); }
 .form-success:focus { outline: none; }
 
 .form-success-h {
-  font-family: 'Playfair Display', serif;
+  font-family: 'sofia-pro', sans-serif;
   font-size: 1.375rem;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--accent-ink);
   margin-bottom: 10px;
 }
@@ -898,7 +898,7 @@ section { padding: 100px var(--edge); }
   background: var(--surface-2);
   border: 1px solid var(--line-2);
   color: var(--ink);
-  font-family: 'Inter', sans-serif;
+  font-family: 'sofia-pro', sans-serif;
   font-size: 0.875rem;
   padding: 13px 16px;
   transition: border-color 0.2s;
@@ -980,7 +980,7 @@ section { padding: 100px var(--edge); }
   width: 100%;
   background: var(--terracotta);
   color: var(--dark);
-  font-family: 'Inter', sans-serif;
+  font-family: 'sofia-pro', sans-serif;
   font-size: 0.8125rem;
   font-weight: 700;
   letter-spacing: 0.14em;

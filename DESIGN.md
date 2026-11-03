@@ -1,6 +1,6 @@
 ---
 name: Zelo Real Estate — Recruiting LP2
-description: Warm cream paper, an authoritative serif and one terracotta signature, used for a boutique agency recruiting agents in Trento.
+description: Warm cream paper, the parent brand's geometric sans (Sofia Pro) and one terracotta signature, used for a boutique agency recruiting agents in Trento.
 colors:
   terracotta: "#d09f79"
   terracotta-dark: "#b8845c"
@@ -25,43 +25,43 @@ colors:
   chart-coord: "#f1e2d7"
 typography:
   display:
-    fontFamily: "Playfair Display, serif"
+    fontFamily: "sofia-pro, sans-serif"
     fontSize: "clamp(40px, 4.6vw, 68px)"
-    fontWeight: 900
+    fontWeight: 600
     lineHeight: 1.1
   headline:
-    fontFamily: "Playfair Display, serif"
+    fontFamily: "sofia-pro, sans-serif"
     fontSize: "clamp(32px, 4vw, 54px)"
-    fontWeight: 700
+    fontWeight: 600
     lineHeight: 1.15
   title:
-    fontFamily: "Playfair Display, serif"
+    fontFamily: "sofia-pro, sans-serif"
     fontSize: "22px"
-    fontWeight: 700
+    fontWeight: 600
     lineHeight: 1.25
   numeral:
-    fontFamily: "Playfair Display, serif"
+    fontFamily: "sofia-pro, sans-serif"
     fontSize: "42px"
-    fontWeight: 900
+    fontWeight: 600
     lineHeight: 1
   lead:
-    fontFamily: "Inter, sans-serif"
+    fontFamily: "sofia-pro, sans-serif"
     fontSize: "18px"
     fontWeight: 300
     lineHeight: 1.7
   body:
-    fontFamily: "Inter, sans-serif"
+    fontFamily: "sofia-pro, sans-serif"
     fontSize: "14px"
-    fontWeight: 400
+    fontWeight: 300
     lineHeight: 1.75
   label:
-    fontFamily: "Inter, sans-serif"
+    fontFamily: "sofia-pro, sans-serif"
     fontSize: "11px"
-    fontWeight: 400
+    fontWeight: 300
     lineHeight: 1.6
     letterSpacing: "0.22em"
   button:
-    fontFamily: "Inter, sans-serif"
+    fontFamily: "sofia-pro, sans-serif"
     fontSize: "13px"
     fontWeight: 600
     letterSpacing: "0.1em"
@@ -112,15 +112,15 @@ components:
 
 **Creative North Star: "Lo Studio di Selezione"**
 
-The page feels like a boutique selection studio: warm cream paper, white sheets laid on top of it, a high-contrast serif that speaks with authority, and a single terracotta signature that marks what matters. Everything is squared off and precise, like a tailored dossier handed to an experienced professional. It never reads like a mass job board.
+The page feels like a boutique selection studio: warm cream paper, white sheets laid on top of it, a geometric sans (Sofia Pro, the parent site's typeface) that speaks with quiet authority, and a single terracotta signature that marks what matters. Everything is squared off and precise, like a tailored dossier handed to an experienced professional. It never reads like a mass job board.
 
-Density is calm and editorial. Sections breathe (100px vertical rhythm), cards are generous (44px padding), and each block carries one idea. Hierarchy comes from serif weight contrast (Playfair 900/700 against Inter 300/400) Headings carry their own weight: there are no eyebrow labels above them. Decoration is not used for hierarchy.
+Density is calm and editorial. Sections breathe (100px vertical rhythm), cards are generous (44px padding), and each block carries one idea. Hierarchy comes from weight and size contrast (Sofia Pro 600 against Sofia Pro 300). Headings carry their own weight: there are no eyebrow labels above them. Decoration is not used for hierarchy.
 
-The LP takes the parent site's palette (terracotta and the house logo) but deliberately keeps its own voice. The serif and the boxed cards set it apart from the main zelore.it site, whose type is a geometric sans and which uses pill buttons and a fixed terracotta side rail. That distinction is intentional, not drift.
+The LP takes the parent site's palette (terracotta and the house logo) but deliberately keeps its own voice. It shares the main zelore.it site's typeface, Sofia Pro, at the client's request; the boxed cards and square buttons still set it apart from the parent site's pill buttons and fixed terracotta side rail. That distinction is intentional, not drift.
 
 **Key Characteristics:**
 - Cream page (#f7f2ec), with white cards and a light shadow layered on top.
-- Playfair Display for every headline, numeral and card title; Inter for everything else.
+- Sofia Pro everywhere: 600 for every headline, numeral and card title, 300 for everything else.
 - One accent colour, terracotta: the light tone fills CTAs, and a deeper tone of the same hue colours highlighted words and numbers.
 - Square corners everywhere, with no exceptions.
 - Spaced uppercase only for small functional text (nav, buttons, form labels, the stats panel caption), never as an eyebrow above a heading.
@@ -160,25 +160,24 @@ A warm, low-saturation earth palette: cream, near-black ink and one terracotta s
 
 ## Typography
 
-**Display Font:** Playfair Display (with serif). Weights 400/700/900 are loaded.
-**Body Font:** Inter (with sans-serif). Weights 300/400/500/600 are loaded.
+**Font:** Sofia Pro (`sofia-pro`, with sans-serif), loaded from the zelore.it Adobe Fonts web project (`use.typekit.net/ras1inq.css`). Only weights 300 and 600 are in the kit: requested 400/500 render as 300, 700/900 render as 600. The kit belongs to the agency that runs zelore.it; a dedicated project for LP2 is pending.
 
-**Character:** A high-contrast didone serif gives authority and a premium, editorial weight. A neutral grotesque carries the reading load without competing.
+**Character:** One geometric sans, matching the parent brand. SemiBold carries claims and numbers; Light carries the reading load without competing.
 
 ### Hierarchy
-- **Display** (900, clamp(40px, 4.6vw, 68px), 1.1): hero H1 and the Candidatura H2. The second clause turns Terracotta Bruciata (`terracotta-text`), set as a block on its own line in the hero.
-- **Headline** (700, clamp(32px, 4vw, 54px), 1.15): section H2s, optionally with one word in `terracotta-text`.
-- **Title** (700, 22px, 1.25): card titles, form title and founder names (20px). Pain cards use 18px.
-- **Numeral** (900, 42–64px, 1): stat figures and the "32" band numeral (`terracotta-text`, up to 210px at -0.04em), and the Percorso step indices (decorative, pale terracotta, `aria-hidden`).
+- **Display** (600, clamp(40px, 4.6vw, 68px), 1.1): hero H1 and the Candidatura H2. The second clause turns Terracotta Bruciata (`terracotta-text`), set as a block on its own line in the hero.
+- **Headline** (600, clamp(32px, 4vw, 54px), 1.15): section H2s, optionally with one word in `terracotta-text`.
+- **Title** (600, 22px, 1.25): card titles, form title and founder names (20px). Pain cards use 18px.
+- **Numeral** (600, 42–64px, 1): stat figures and the "32" band numeral (`terracotta-text`, up to 210px at -0.04em), and the Percorso step indices (decorative, pale terracotta, `aria-hidden`).
 - **Lead** (300, 18px, 1.7): hero sub only, max 560px wide.
-- **Body** (400, 14–16px, 1.65–1.75): card copy at 14px and section subs at 16px, max about 560px.
-- **Label** (400–700, 11–13px, 0.1–0.2em, UPPERCASE): nav, buttons, form labels (12px), founder roles (11px) and the stats panel caption. Never below 11px.
-- **Pull-quote** (Playfair 700, clamp(24px, 2.2vw, 34px), 1.25): the founders' statement, with one clause in `terracotta-text`. No italics anywhere on the page.
+- **Body** (300, 14–16px, 1.65–1.75): card copy at 14px and section subs at 16px, max about 560px.
+- **Label** (300–600, 11–13px, 0.1–0.2em, UPPERCASE): nav, buttons, form labels (12px), founder roles (11px) and the stats panel caption. Never below 11px.
+- **Pull-quote** (600, clamp(24px, 2.2vw, 34px), 1.25): the founders' statement, with one clause in `terracotta-text`. No italics anywhere on the page.
 
 ### Named Rules
-**The Serif-Speaks Rule.** Anything that makes a claim (headline, number, card title, quote) is set in Playfair. Anything that explains or labels is set in Inter.
+**The Weight-Speaks Rule.** Anything that makes a claim (headline, number, card title, quote) is set in Sofia Pro 600. Anything that explains or labels is set in Sofia Pro 300.
 
-**The Spaced Caps Rule.** Uppercase only appears small (≤13px) and always tracked (≥0.1em). Never set uppercase Playfair.
+**The Spaced Caps Rule.** Uppercase only appears small (≤13px) and always tracked (≥0.1em). Never set uppercase headlines.
 
 ## Layout
 
@@ -227,7 +226,7 @@ The overall feel is tailored and squared off: precise edges, spaced small caps a
 
 ### Buttons
 - **Shape:** square corners (0px).
-- **Primary:** terracotta fill with ink text, Inter 600 13px uppercase at 0.1em tracking, padding 16px 36px. Labels end with "→".
+- **Primary:** terracotta fill with ink text, Sofia Pro 600 13px uppercase at 0.1em tracking, padding 16px 36px. Labels end with "→".
 - **Hover:** fill darkens to terracotta-dark and the button rises 1px (`translateY(-1px)`). Transitions are 0.2s on background and 0.15s on transform.
 - **Nav CTA:** a compact primary button (12px, 0.12em, padding 12px 24px) with no lift on hover.
 - **Submit:** full-width primary, weight 700, 0.14em tracking, padding 18px. Disabled state uses 0.6 opacity with a not-allowed cursor.
@@ -244,7 +243,7 @@ The overall feel is tailored and squared off: precise edges, spaced small caps a
 Replaces separate pain and pillar card rows. Two columns under small uppercase column heads ("Oggi, in un'agenzia tradizionale" in ink-soft / "Da Zelo Real Estate" in accent-ink), one row per problem, rows split by hairlines. The left cell sits on the page in ink-soft (title 19px); a thin `terracotta-text` arrow (inline SVG) points to the right cell, a white sheet with the card-rest shadow (title 22px, ink). Below 900px the columns stack, the arrow hides and each cell shows its own "Oggi" / "Da Zelo" tag.
 
 ### Inputs / Fields
-- **Style:** fill in `surface-2`, 1px `line-2` border, square corners, Inter 14px (16px below 900px, so iOS does not zoom), padding 13px 16px, native appearance removed.
+- **Style:** fill in `surface-2`, 1px `line-2` border, square corners, Sofia Pro 14px (16px below 900px, so iOS does not zoom), padding 13px 16px, native appearance removed.
 - **Labels:** 12px uppercase at 0.1em in ink-soft, sitting above the field.
 - **Focus:** the border shifts to `accent-ink` and the shared focus ring appears (2px `accent-ink` outline).
 - **Errors:** validated in JS, all at once on submit, then live as the user corrects. Each field shows a 13px `error` message directly beneath it, gets `aria-invalid` and a red border, and focus moves to the first invalid field. Errors name the fix ("usa cifre, spazi e prefisso, es. +39 …").
@@ -269,19 +268,19 @@ Founder portraits ship as 760px WebP (27–40 KB each, about 2× the desktop dis
 - Below 900px the links hide and only the logo and CTA remain.
 
 ### Stats panel (signature)
-A white sheet with the highest lift and a faint terracotta border (28%). A small uppercase caption sits on top (a panel caption, not a heading eyebrow), followed by four rows split by hairlines (70M€, >500k€ valore medio, 137, 400), each with a 42px Playfair numeral in `terracotta-text` and a 13px caption. Below 900px the four stats sit in a 2×2 grid with 34px numerals.
+A white sheet with the highest lift and a faint terracotta border (28%). A small uppercase caption sits on top (a panel caption, not a heading eyebrow), followed by four rows split by hairlines (70M€, >500k€ valore medio, 137, 400), each with a 42px Sofia Pro numeral in `terracotta-text` and a 13px caption. Below 900px the four stats sit in a 2×2 grid with 34px numerals.
 
 ### Timechart (signature)
 A comparison of horizontal 100% stacked bars, 46px high with square ends. The traditional-agency bar uses the three chart greys. The Zelo bar uses terracotta for active selling and `chart-coord` for its 20% relazione e coordinamento, each with its own legend entry. Percent labels sit inside the segments in dark ink on every grey and terracotta segment, never white, with a square-dot legend below.
 
 ### "32 visite" band (signature)
-The proof of the pre-qualification method, set apart from the cards. It sits directly on the cream page, with no card. A giant Playfair 900 "32" in `terracotta-text` sits beside the headline "visite in un solo sabato.", a short paragraph and a grid of 32 terracotta squares, one per viewing (16 per row on desktop, 8 on mobile). The squares fill in sequence (32ms apart, ease-out) when the band enters view. The band sits on the content edge (not centred) and has no button of its own: the "perché Zelo" block (Metodo, 32, Portfolio) closes with a single CTA at the end of the portfolio.
+The proof of the pre-qualification method, set apart from the cards. It sits directly on the cream page, with no card. A giant Sofia Pro 600 "32" in `terracotta-text` sits beside the headline "visite in un solo sabato.", a short paragraph and a grid of 32 terracotta squares, one per viewing (16 per row on desktop, 8 on mobile). The squares fill in sequence (32ms apart, ease-out) when the band enters view. The band sits on the content edge (not centred) and has no button of its own: the "perché Zelo" block (Metodo, 32, Portfolio) closes with a single CTA at the end of the portfolio.
 
 ### Founders (signature)
-The answer to "con chi lavorerai". Three columns on the content edge: two large portraits and the founders' statement. The photos are cut-outs on white, set on a `cream` panel (aspect 8:9) with `mix-blend-mode: multiply` so the white disappears into the cream; square corners, no border. Under each photo a hairline, then the name in Playfair 700 26px, the role in 11px tracked caps `accent-ink`, the bio in 14px ink-soft. The statement sits in the third column behind a 1px hairline rule, as a Playfair 700 pull-quote (24–34px) with "mettere al centro la persona." in `terracotta-text`, signed in 12px tracked caps. Below 900px the statement comes first, full width, then the portraits (side by side on tablet, stacked and 1:1 on phone).
+The answer to "con chi lavorerai". Three columns on the content edge: two large portraits and the founders' statement. The photos are cut-outs on white, set on a `cream` panel (aspect 8:9) with `mix-blend-mode: multiply` so the white disappears into the cream; square corners, no border. Under each photo a hairline, then the name in Sofia Pro 600 26px, the role in 11px tracked caps `accent-ink`, the bio in 14px ink-soft. The statement sits in the third column behind a 1px hairline rule, as a Sofia Pro 600 pull-quote (24–34px) with "mettere al centro la persona." in `terracotta-text`, signed in 12px tracked caps. Below 900px the statement comes first, full width, then the portraits (side by side on tablet, stacked and 1:1 on phone).
 
 ### Portfolio (signature)
-Proof of the first pillar: six real closed operations from LP1, ordered by value. It is an editorial composition, not a grid of equal cards: on a 6-column grid the most valuable operation (Villa Trento) spans four columns and two rows, two sit beside it, three run underneath. Photos are 3:2, square-cornered, with no frame; the feature photo stretches to the height of the two beside it. Captions sit under the photo with a hairline below: name in Playfair 700 (18px, 24px on the feature), year in 13px ink-soft, value in Playfair 700 `terracotta-text` on the right (24px, 36px on the feature). Below 900px the feature goes full width, the rest sit two per row (the last full width), and captions stack. Photos ship as WebP (feature 1300px, others 800px) with lazy loading. Only real, closed operations go here: renders and listings never do.
+Proof of the first pillar: six real closed operations from LP1, ordered by value. It is an editorial composition, not a grid of equal cards: on a 6-column grid the most valuable operation (Villa Trento) spans four columns and two rows, two sit beside it, three run underneath. Photos are 3:2, square-cornered, with no frame; the feature photo stretches to the height of the two beside it. Captions sit under the photo with a hairline below: name in Sofia Pro 600 (18px, 24px on the feature), year in 13px ink-soft, value in Sofia Pro 600 `terracotta-text` on the right (24px, 36px on the feature). Below 900px the feature goes full width, the rest sit two per row (the last full width), and captions stack. Photos ship as WebP (feature 1300px, others 800px) with lazy loading. Only real, closed operations go here: renders and listings never do.
 
 ### Motion
 Sections fade up 18px over 0.6s ease as they enter the viewport (`.reveal` → `.in`). The hidden starting state applies only under `html.js`, set by an inline script in `<head>`, so without JavaScript every section and every "32" square is simply visible. Two data moments carry their own motion, both tied to what they prove:
@@ -293,7 +292,7 @@ No other element gets a staggered or counting animation. With `prefers-reduced-m
 ## Do's and Don'ts
 
 ### Do:
-- **Do** set every headline, numeral and card title in Playfair Display (700/900), and all supporting copy in Inter.
+- **Do** set every headline, numeral and card title in Sofia Pro 600, and all supporting copy in Sofia Pro 300.
 - **Do** highlight one word or clause per headline in `terracotta-text` (#a86f42), and keep the rest in ink.
 - **Do** put ink (#141414) text on terracotta fills.
 - **Do** use `accent-ink` (#6b4423) for small accent text such as roles, the "Da Zelo" tags and the focus ring.
@@ -306,4 +305,4 @@ No other element gets a staggered or counting animation. With `prefers-reduced-m
 - **Don't** introduce a second accent hue or use gradients on components.
 - **Don't** set any text in the light `terracotta` (#d09f79) on cream or white; it is 2.1–2.4:1. Use `terracotta-text` for large text and `accent-ink` for small text.
 - **Don't** use hard or dark shadows. Blur stays ≥30px and opacity ≤10%.
-- **Don't** set uppercase in Playfair, or set untracked uppercase.
+- **Don't** set uppercase headlines, or set untracked uppercase.
