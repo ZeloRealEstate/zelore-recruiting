@@ -26,9 +26,9 @@ colors:
 typography:
   display:
     fontFamily: "sofia-pro, sans-serif"
-    fontSize: "clamp(40px, 4.6vw, 68px)"
-    fontWeight: 600
-    lineHeight: 1.1
+    fontSize: "clamp(32px, 3.6vw, 54px)"
+    fontWeight: 300
+    lineHeight: 1.14
   headline:
     fontFamily: "sofia-pro, sans-serif"
     fontSize: "clamp(32px, 4vw, 54px)"
@@ -165,7 +165,7 @@ A warm, low-saturation earth palette: cream, near-black ink and one terracotta s
 **Character:** One geometric sans, matching the parent brand. SemiBold carries claims and numbers; Light carries the reading load without competing.
 
 ### Hierarchy
-- **Display** (600, clamp(40px, 4.6vw, 68px), 1.1): hero H1 and the Candidatura H2. The second clause turns Terracotta Bruciata (`terracotta-text`), set as a block on its own line in the hero.
+- **Scaled title** (300, UPPERCASE, 1.14): hero H1 (32–54px) and Candidatura H2 (32–52px), and only these two. Modelled on the zelore.it titles: four staggered lines, with the second clause in Terracotta Bruciata (`terracotta-text`) and the site's two corner glyphs (`glifo-top.svg`, `glifo-bottom.svg`) on the first and last lines. Line breaks are fixed and never wrap; font size and offsets shrink below 900px.
 - **Headline** (600, clamp(32px, 4vw, 54px), 1.15): section H2s, optionally with one word in `terracotta-text`.
 - **Title** (600, 22px, 1.25): card titles, form title and founder names (20px). Pain cards use 18px.
 - **Numeral** (600, 42–64px, 1): stat figures and the "32" band numeral (`terracotta-text`, up to 210px at -0.04em), and the Percorso step indices (decorative, pale terracotta, `aria-hidden`).
@@ -175,9 +175,9 @@ A warm, low-saturation earth palette: cream, near-black ink and one terracotta s
 - **Pull-quote** (600, clamp(24px, 2.2vw, 34px), 1.25): the founders' statement, with one clause in `terracotta-text`. No italics anywhere on the page.
 
 ### Named Rules
-**The Weight-Speaks Rule.** Anything that makes a claim (headline, number, card title, quote) is set in Sofia Pro 600. Anything that explains or labels is set in Sofia Pro 300.
+**The Weight-Speaks Rule.** Anything that makes a claim (headline, number, card title, quote) is set in Sofia Pro 600; the two scaled titles are the exception, in 300. Anything that explains or labels is set in Sofia Pro 300.
 
-**The Spaced Caps Rule.** Uppercase only appears small (≤13px) and always tracked (≥0.1em). Never set uppercase headlines.
+**The Spaced Caps Rule.** Uppercase only appears small (≤13px) and always tracked (≥0.1em). Never set uppercase headlines, except the two scaled titles.
 
 ## Layout
 
@@ -292,7 +292,7 @@ No other element gets a staggered or counting animation. With `prefers-reduced-m
 ## Do's and Don'ts
 
 ### Do:
-- **Do** set every headline, numeral and card title in Sofia Pro 600, and all supporting copy in Sofia Pro 300.
+- **Do** set every headline, numeral and card title in Sofia Pro 600 (the two scaled titles use 300), and all supporting copy in Sofia Pro 300.
 - **Do** highlight one word or clause per headline in `terracotta-text` (#a86f42), and keep the rest in ink.
 - **Do** put ink (#141414) text on terracotta fills.
 - **Do** use `accent-ink` (#6b4423) for small accent text such as roles, the "Da Zelo" tags and the focus ring.
@@ -305,4 +305,4 @@ No other element gets a staggered or counting animation. With `prefers-reduced-m
 - **Don't** introduce a second accent hue or use gradients on components.
 - **Don't** set any text in the light `terracotta` (#d09f79) on cream or white; it is 2.1–2.4:1. Use `terracotta-text` for large text and `accent-ink` for small text.
 - **Don't** use hard or dark shadows. Blur stays ≥30px and opacity ≤10%.
-- **Don't** set uppercase headlines, or set untracked uppercase.
+- **Don't** set uppercase headlines (the two scaled titles excepted), or set untracked uppercase.
